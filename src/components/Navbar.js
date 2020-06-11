@@ -1,9 +1,8 @@
 /* eslint-disable */
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
-import { CSSTransition } from 'react-transition-group';
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -62,9 +61,7 @@ const Navbar = class extends React.Component {
           </div>
 
           {/* NAVLINKS */}
-          <CSSTransition
-            in={this.state.active}
-            timeout={200}
+          <div
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
@@ -97,7 +94,7 @@ const Navbar = class extends React.Component {
                 </span>
               </a>
             </div>*/}
-          </CSSTransition>
+          </div>
 
 
 
