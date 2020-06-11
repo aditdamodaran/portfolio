@@ -1,14 +1,16 @@
-import React from 'react'
+/* eslint-disable */
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
+import { CSSTransition } from 'react-transition-group';
 
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       active: false,
-      navBarActiveClass: '',
+      navBarActiveClass: ''
     }
   }
 
@@ -35,27 +37,34 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar"
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
+
+          {/* Hamburger menu */}
+          <div
+            className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+            data-target="navMenu"
+            onClick={() => this.toggleHamburger()}
+          >
+            <span />
+            <span />
+            <span />
+          </div>
+
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
+            {/* LOGO */}
+            <Link to="/" className="navbar-logo" title="Logo">
               <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
             </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
           </div>
-          <div
+
+          {/* NAVLINKS */}
+          <CSSTransition
+            in={this.state.active}
+            timeout={200}
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
@@ -76,7 +85,7 @@ const Navbar = class extends React.Component {
                 Form Examples
               </Link>
             </div>
-            <div className="navbar-end has-text-centered">
+            {/*<div className="navbar-end">
               <a
                 className="navbar-item"
                 href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
@@ -87,9 +96,12 @@ const Navbar = class extends React.Component {
                   <img src={github} alt="Github" />
                 </span>
               </a>
-            </div>
-          </div>
-        </div>
+            </div>*/}
+          </CSSTransition>
+
+
+
+        </div> {/* Close 'container' */}
       </nav>
     )
   }
