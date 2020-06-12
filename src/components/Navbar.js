@@ -43,6 +43,10 @@ const Navbar = class extends React.Component {
       >
         <div className="container">
 
+          <CSSTransition
+          in={this.state.active}
+          timeout={400}
+          >
           {/* Hamburger menu */}
           <div
             className={`navbar-burger burger ${this.state.navBarActiveClass}`}
@@ -52,7 +56,9 @@ const Navbar = class extends React.Component {
             <span />
             <span />
             <span />
+            <span />
           </div>
+          </CSSTransition>
 
           <div className="navbar-brand">
             {/* LOGO */}
@@ -62,41 +68,41 @@ const Navbar = class extends React.Component {
           </div>
 
           {/* NAVLINKS */}
-          <CSSTransition
-            in={this.state.active}
-            timeout={200}
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            {/*<div className="navbar-end">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>*/}
+            <CSSTransition
+              in={this.state.active}
+              timeout={400}
+              id="navMenu"
+              className={`navbar-menu ${this.state.navBarActiveClass}`}
+            >
+              <div className="navbar-start has-text-centered">
+                <Link className="navbar-item" to="/about">
+                  About
+                </Link>
+                <Link className="navbar-item" to="/products">
+                  Products
+                </Link>
+                <Link className="navbar-item" to="/blog">
+                  Blog
+                </Link>
+                <Link className="navbar-item" to="/contact">
+                  Contact
+                </Link>
+                <Link className="navbar-item" to="/contact/examples">
+                  Form Examples
+                </Link>
+              </div>
+              {/*<div className="navbar-end">
+                <a
+                  className="navbar-item"
+                  href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="icon">
+                    <img src={github} alt="Github" />
+                  </span>
+                </a>
+              </div>*/}
           </CSSTransition>
 
 
