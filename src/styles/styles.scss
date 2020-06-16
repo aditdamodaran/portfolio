@@ -1,7 +1,11 @@
 // Normalized Styles
 @import '../../node_modules/normalize.css/normalize.css';
+// Fonts
+@import 'fonts/fonts';
 // Base Styles
 @import 'base/base';
+// Page Specific Styles
+@import 'pages/index';
 // Component Specific Styles
 @import 'components/navbar';
 @import 'components/layout';

@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
+import github from '../img/github-icon.svg'
+import codepen from '../img/codepen-icon.svg'
+import linkedin from '../img/linkedin-icon.svg'
+import twitter from '../img/twitter-icon.svg'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
@@ -17,53 +20,70 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
+      className="landing-page-container"
     >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
+
+    <section className="main-landing">
+      {/* MAIN LANDING PAGE COPY */}
+      <div className="landing-page-copy-container">
         <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
+          className="landing-page-primary-copy"
         >
-          {title}
+          <span className="name">Adit Damodaran</span> is a builder at <span className="heart">♥</span>
         </h1>
+        <div className="flex-break"></div>
         <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
+          className="landing-page-subheading-copy"
         >
           {subheading}
         </h3>
       </div>
+
+      {/* MAIN LANDING PAGE SOCIAL ICONS (DESKTOP) */}
+
+      <div 
+        className="social-icons-sidebar"
+      >
+        <ul>
+          <li>
+            <Link to="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="LinkedIn">
+              <img className="social-icon" src={linkedin} alt="LinkedIn" />
+            </Link>
+          </li>
+          <li>
+            <Link to="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="GitHub">
+              <img className="social-icon" src={github} alt="Github" />
+            </Link>
+          </li>
+          <li>
+            <Link to="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="Codepen">
+              <img className="social-icon" src={codepen} alt="Codepen" />
+            </Link>
+          </li>
+          <li>
+            <Link to="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="Twitter">
+            <img className="social-icon" src={twitter} alt="Twitter" />
+            </Link>
+          </li>
+        </ul>
+      </div>
+      
+    </section>
+
+
+
+
+
+
     </div>
+
+
+
+
+
+
+
+
     <section className="section section--gradient">
       <div className="container">
         <div className="section">

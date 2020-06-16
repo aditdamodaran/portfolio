@@ -1,8 +1,29 @@
+// COLORS
+$primary-background: #fff;
+$secondary-background: #333;
+$tertiary-background: #888;
+$secondary-text: #444;
+$tertiary-text: #666;
+
+// GLOBALS
+.padding-0 {
+  padding: 0;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+
+
+
+// MIXINS
 @function calculateRem($size) {
   $remSize: $size / 16px;
   @return #{$remSize}rem;
 }
 
+// SCREEN SIZES
 $mobile: 768;
 $tablet: 768;
 $large: 1024;
@@ -31,3 +52,4 @@ $desktop: 1280;
     @content;
   }
 }
+

@@ -15,7 +15,8 @@ const Navbar = class extends React.Component {
       navBarActiveClass: '',
       scrollDirection: 'none',
       lastScrollTop: 0,
-      menuOpen: false
+      menuOpen: false,
+      atTop: true
     }
     this.handleScroll = this.handleScroll.bind(this)
   }
@@ -46,20 +47,28 @@ const Navbar = class extends React.Component {
   }
 
   handleScroll = () => {
-    const { isMounted, scrollDirection, lastScrollTop, menuOpen } = this.state
+    const { isMounted, scrollDirection, lastScrollTop, menuOpen, atTop } = this.state
     const fromTop = window.scrollY
     const DELTA = 10
     const navHeight = 3
-    // console.log(isMounted, scrollDirection, lastScrollTop, fromTop)
+    console.log(isMounted, scrollDirection, lastScrollTop, fromTop)
 
     // Make sure they scroll more than DELTA (to reveal Navbar)
     // Make sure the menu isn't open
     // Make sure they aren't near the top (to hide Navbar) 
+    if (fromTop < 100){
+      this.setState({ atTop: true });
+    }
+    
     if (!isMounted 
       || Math.abs(lastScrollTop - fromTop) <= DELTA 
       || menuOpen
       || fromTop < 100) {
       return;
+    }
+
+    if (fromTop > 100){
+      this.setState({ atTop: false });
     }
 
     
@@ -108,7 +117,9 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
         style={{
-          transition: 'transform 0.3s ease-out',
+          transition: 'transform 0.3s ease-out, background-color 0.3s ease-out, box-shadow 0.3s ease-out',
+          backgroundColor: (this.state.scrollDirection === 'down' || this.state.atTop ? `transparent` : `white`),
+          boxShadow : (this.state.atTop ? `none` : `0 1px 30px -10px #333`),
           transform : (this.state.scrollDirection === 'down' ? `translateY(-3rem)` : `translateY(0rem)`)
         }}
       >
@@ -150,16 +161,16 @@ const Navbar = class extends React.Component {
                   About
                 </Link>
                 <Link className="navbar-item" to="/products">
-                  Products
+                  Experience
+                </Link>
+                <Link className="navbar-item" to="/contact/examples">
+                  Work
                 </Link>
                 <Link className="navbar-item" to="/blog">
                   Blog
                 </Link>
                 <Link className="navbar-item" to="/contact">
                   Contact
-                </Link>
-                <Link className="navbar-item" to="/contact/examples">
-                  Form Examples
                 </Link>
               </div>
               {/*<div className="navbar-end">
