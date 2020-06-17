@@ -51,7 +51,7 @@ const Navbar = class extends React.Component {
     const fromTop = window.scrollY
     const DELTA = 10
     const navHeight = 3
-    console.log(isMounted, scrollDirection, lastScrollTop, fromTop)
+    // console.log(isMounted, scrollDirection, lastScrollTop, fromTop)
 
     // Make sure they scroll more than DELTA (to reveal Navbar)
     // Make sure the menu isn't open

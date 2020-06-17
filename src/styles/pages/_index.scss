@@ -1,6 +1,10 @@
 // .landing-page-container {
 // }
 
+* {
+  // border: 1px solid red;
+}
+
 section.main-landing{
   position: relative;
   width: 100%;
@@ -57,13 +61,15 @@ section.main-landing{
 // }
 
 .social-icons-sidebar {
-  position: absolute;
+  position: fixed;
   display: flex;
   right: 1.25rem;
   top: 0;
   height: 100vh;
   align-content: center;
   justify-content: end;
+  z-index: 100;
+  mix-blend-mode: difference;
   // width: 2rem;
 
   ul {
@@ -82,6 +88,9 @@ section.main-landing{
     flex-basis: 100%;
     list-style: none;
     margin: 0.4rem 0rem;
+    img {
+      filter: brightness(0) invert(1);
+    }
   }
   li:hover {
     opacity: .25;
@@ -92,11 +101,101 @@ section.main-landing{
   }
 }
 
+// ABOUT
+
+section#aboutme{
+  position: relative;
+  width: 100%;
+  // left: 0;
+  background-color: $secondary-background;
+}
+
+
+.about-me-container {
+  width: calc(100% - 2rem);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 0rem;
+}
+
+.about-me-left,
+.about-me-right {
+  height: 100%;
+  width: 100%;
+}
+
+.about-me-right {
+  display: flex;
+  justify-content: center;
+  // padding-left: 2rem;
+}
+
+
+.about-me-left {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  align-content: center;
+  display: grid;
+}
+
+
+.about-me-title {
+  color: white;
+  font-family: 'AvenirNext-Regular';
+  font-size: calculateRem(36px);
+}
+
+.about-me-description,
+.recent-technologies {
+  color: white;
+  font-family: 'Avenir-Light';
+  font-weight: 100;
+}
+
+.about-me-description-segment {
+  margin: 1rem 0rem;
+}
+
+.recent-technologies {
+  padding: 0;
+  font-weight: bold;
+  list-style: none;
+}
+
+.about-me-image {
+  width: 75%;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.about-me-image:hover {
+  filter: none;
+  cursor: pointer;
+}
+
+section#work{
+  position: relative;
+  width: 100%;
+  height: 80vh; //delete this later
+  background-color: black;
+  display: grid;
+  align-content: center;
+}
+
+
+
 
 @include mobile {
-  .landing-page-container {
-    padding: 0rem 1rem;
+  section.main-landing,
+  section#aboutme {
+    // padding: 0rem 1rem;
   }
+
+  .about-me-image-container {
+    margin-bottom: 2rem;
+  }
+  
   .landing-page-copy-container {
     padding: 0rem 0rem;
     span.name {

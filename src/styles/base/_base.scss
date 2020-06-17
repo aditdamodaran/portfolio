@@ -5,18 +5,6 @@ $tertiary-background: #888;
 $secondary-text: #444;
 $tertiary-text: #666;
 
-// GLOBALS
-.padding-0 {
-  padding: 0;
-}
-
-.margin-0 {
-  margin: 0;
-}
-
-
-
-
 // MIXINS
 @function calculateRem($size) {
   $remSize: $size / 16px;
@@ -36,13 +24,13 @@ $desktop: 1280;
 }
 
 @mixin tablet {
-  @media only screen and (min-width: $tablet * 1px) {
+  @media only screen and (max-width: $tablet * 1px) {
     @content;
   }
 }
 
 @mixin large {
-  @media only screen and (min-width: $large * 1px) {
+  @media only screen and (max-width: $large * 1px) {
     @content;
   }
 }
@@ -53,3 +41,37 @@ $desktop: 1280;
   }
 }
 
+
+// GLOBALS
+.padding-0 {
+  padding: 0;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.third {
+  flex-basis: 33%;
+  display: flex;
+}
+
+.two-thirds {
+  flex-basis: 66%;
+  display: flex;
+}
+
+.left-half,
+.right-half {
+  flex-basis: 50%;
+  display: flex;
+}
+
+@include large {
+  .left-half,
+  .right-half,
+  .third,
+  .two-thirds {
+    flex-basis: 100%;
+  }
+}

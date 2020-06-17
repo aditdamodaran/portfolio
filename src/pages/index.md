@@ -4,13 +4,17 @@ title:  Adit Damodaran is a builder at ♥
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: I’ve held titles ranging from software engineer, to economist, to designer.
-mainpitch:
-  title: Why Kaldi
-  description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+aboutme:
+  title: About Me
+  description1: >
+    Heya! I’m Adit (“uh-dit”). I’m a software engineer, web designer, photographer, writer, and avid roadtripper. I most recently worked as an Economist at Hopper, but am looking for my next opportunity a bit early due to Covid-19.  
+  description2: >
+    I graduated from the University of Chicago in Dec. 2019 with a B.A. in Economics and a specialization in Data Science. In Aug. 2020, I’ll begin my Online Master’s in Computer Science at the Georgia Institute of Technology.
+  description3: >
+    During my brief time at Hopper, I developed a report on how Covid-19 would affect U.S. & Canadian flight operations and airfare, and created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers.
+  description4: >
+    Prior to that, I worked as a software engineering intern at Digitas for the Intel account. I was also an undergraduate VC Intern with Chicago Ventures, and a Marketing/Design Intern alongside the amazing team at the Polsky Center for Entrepreneurship and Innovation.
+  image: /img/me.jpg
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,

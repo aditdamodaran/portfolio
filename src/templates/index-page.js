@@ -8,13 +8,15 @@ import twitter from '../img/twitter-icon.svg'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import Work from '../components/Work'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const IndexPageTemplate = ({
   image,
   title,
   heading,
   subheading,
-  mainpitch,
+  aboutme,
   description,
   intro,
 }) => (
@@ -46,28 +48,73 @@ export const IndexPageTemplate = ({
       >
         <ul>
           <li>
-            <Link to="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="LinkedIn">
               <img className="social-icon" src={linkedin} alt="LinkedIn" />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="GitHub">
+            <a href="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="GitHub">
               <img className="social-icon" src={github} alt="Github" />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="Codepen">
+            <a href="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="Codepen">
               <img className="social-icon" src={codepen} alt="Codepen" />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="Twitter">
+            <a href="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="Twitter">
             <img className="social-icon" src={twitter} alt="Twitter" />
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
       
+    </section>
+
+
+    <section id="aboutme">
+      <div className="about-me-container">
+
+        <div className="two-thirds">
+          <div className="about-me-left">
+            <h1 className="about-me-title">
+              {aboutme.title}
+            </h1>
+            <h3 className="about-me-description">
+              <div className="about-me-description-segment">{aboutme.description1}</div>
+              <div className="about-me-description-segment">{aboutme.description2}</div>
+              <div className="about-me-description-segment">{aboutme.description3}</div>
+              <div className="about-me-description-segment">{aboutme.description4}</div>
+            </h3>
+            {/*<div className="recent-technologies">Technologies I've been using recently:</div>
+            <hr></hr>
+            <ul className="recent-technologies padding-0">
+              <li>JavaScript</li>
+              <li>JavaScript</li>
+          </ul>*/}
+          </div>
+        </div>
+
+        <div className="third">
+          <div className="about-me-right about-me-image-container">
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: aboutme.image,
+                alt: `Adit Damodaran`,
+                className: "about-me-image"
+              }}
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="work">
+      <div className="work-container">
+      <Work></Work>
+      </div>
     </section>
 
 
@@ -92,10 +139,10 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="content">
                   <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
+                    
                   </div>
                   <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
+                    <h3 className="subtitle">{aboutme.description}</h3>
                   </div>
                 </div>
                 <div className="columns">
@@ -139,7 +186,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
+  aboutme: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
@@ -156,7 +203,7 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
+        aboutme={frontmatter.aboutme}
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
@@ -188,9 +235,19 @@ export const pageQuery = graphql`
         }
         heading
         subheading
-        mainpitch {
+        aboutme {
           title
-          description
+          description1
+          description2
+          description3
+          description4
+          image {
+            childImageSharp {
+              fluid(maxWidth: 500, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          } 
         }
         description
         intro {

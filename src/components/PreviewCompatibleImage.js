@@ -3,21 +3,49 @@ import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { borderRadius: '5px' }
-  const { alt = '', childImageSharp, image } = imageInfo
+  let imgStyle = null
+  let className = null
 
+  if (imageInfo.style) {
+    imgStyle = imageInfo.style
+  }
+  if (imageInfo.className) {
+    className = imageInfo.className
+  }
+
+  const { alt = '', childImageSharp, image } = imageInfo
+  // console.log(className)
   if (!!image && !!image.childImageSharp) {
     return (
-      <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt={alt} />
+      <Img 
+        style={imgStyle} 
+        fluid={image.childImageSharp.fluid} 
+        alt={alt} 
+        className={className}
+      />
     )
   }
 
   if (!!childImageSharp) {
-    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
+    return (
+      <Img 
+        style={imgStyle} 
+        fluid={childImageSharp.fluid} 
+        alt={alt} 
+        className={className}
+      />
+    )
   }
 
   if (!!image && typeof image === 'string')
-    return <img style={imageStyle} src={image} alt={alt} />
+    return (
+      <img 
+        style={imgStyle} 
+        src={image} 
+        alt={alt} 
+        className={className}
+      />
+      )
 
   return null
 }
