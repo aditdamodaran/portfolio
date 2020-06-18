@@ -112,10 +112,12 @@ section#aboutme{
 
 
 .about-me-container {
-  width: calc(100% - 2rem);
+  width: calc(85%);
   display: flex;
   flex-wrap: wrap;
   padding: 4rem 0rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-me-left,
@@ -150,6 +152,7 @@ section#aboutme{
 .recent-technologies {
   color: white;
   font-family: 'Avenir-Light';
+  font-size: calculateRem(18px);
   font-weight: 100;
 }
 
@@ -177,10 +180,16 @@ section#aboutme{
 section#work{
   position: relative;
   width: 100%;
-  height: 80vh; //delete this later
+  padding: 2rem 0rem;
   background-color: black;
   display: grid;
   align-content: center;
+}
+
+.work-experience-title {
+  color: white;
+  font-family: 'AvenirNext-Regular';
+  font-size: calculateRem(36px);
 }
 
 

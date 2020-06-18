@@ -5,9 +5,9 @@ image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: I’ve held titles ranging from software engineer, to economist, to designer.
 aboutme:
-  title: About Me
+  title: Heya! I’m Adit.
   description1: >
-    Heya! I’m Adit (“uh-dit”). I’m a software engineer, web designer, photographer, writer, and avid roadtripper. I most recently worked as an Economist at Hopper, but am looking for my next opportunity a bit early due to Covid-19.  
+    I’m a software engineer, web designer, photographer, writer, and avid roadtripper. I most recently worked as an Economist at Hopper, but am looking for my next opportunity a bit early due to Covid-19.  
   description2: >
     I graduated from the University of Chicago in Dec. 2019 with a B.A. in Economics and a specialization in Data Science. In Aug. 2020, I’ll begin my Online Master’s in Computer Science at the Georgia Institute of Technology.
   description3: >

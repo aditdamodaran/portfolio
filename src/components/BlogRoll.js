@@ -1,58 +1,69 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import BackgroundImage from 'gatsby-background-image'
 
 class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    let { edges: posts } = data.allMarkdownRemark
+    posts = posts.map(({ node: post }) => post)
+
+    // Remove any posts without featured images from the index page
+    if (this.props.index){
+      posts = posts.filter(post => post.frontmatter.featuredimage)
+    }
 
     return (
-      <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
+      <div>
+        <div className="image-gallery is-horizontal">
+            {/* Vertical LEFT Half */}
+            <div className="is-vertical">
+
+
+              <Link className="gallery-tile-half" to={posts[0].fields.slug}>
+                <BackgroundImage className="gallery-tile-inner"
+                  fluid={posts[0].frontmatter.featuredimage.childImageSharp.fluid}>
+                  <div className="overlay-title">
+                    <h2>{posts[0].frontmatter.title}</h2>
+                    <p>Read more...</p>
+                  </div>
+                  <div className="overlay">
+                  </div>
+                </BackgroundImage>
+              </Link>
+
+              <Link className="gallery-tile-half" to={posts[1].fields.slug}>
+                <BackgroundImage className="gallery-tile-inner"
+                fluid={posts[1].frontmatter.featuredimage.childImageSharp.fluid}>
+                  <div className="overlay-title">
+                    <h2>{posts[1].frontmatter.title}</h2>
+                    <p>Read more...</p>
+                  </div>
+                  <div className="overlay">
+                  </div>
+                </BackgroundImage>
+              </Link>
+
             </div>
-          ))}
+            
+            
+            {/* Vertical RIGHT Half */}
+            <Link 
+              className="square" to={posts[1].fields.slug}
+            >
+              <BackgroundImage className="gallery-tile-inner"
+              fluid={posts[1].frontmatter.featuredimage.childImageSharp.fluid}>
+                <div className="overlay-title">
+                  <h2>{posts[1].frontmatter.title}</h2>
+                  <p>Read more...</p>
+                </div>
+                <div className="overlay">
+                </div>
+              </BackgroundImage>
+            </Link>
+        </div>
+        
       </div>
     )
   }
@@ -66,7 +77,7 @@ BlogRoll.propTypes = {
   }),
 }
 
-export default () => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
@@ -88,7 +99,7 @@ export default () => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 1000, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }
@@ -99,6 +110,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <BlogRoll data={data} count={count} index={props.index}/>}
   />
 )

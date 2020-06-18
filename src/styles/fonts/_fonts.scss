@@ -1,11 +1,15 @@
-$folderAvenir: './avenir_next';
-
 @mixin font-face($family, $filename, $folder, $style, $weight) {
   $font-family: $family;
   $src: url('#{$folder}/#{$filename}.ttf') format("truetype");
 }
 
+// AVENIR
+$folderAvenir: './avenir_next';
 @include font-face('Avenir-Light', 'Avenir-Light', $folderAvenir, normal, 100);
 @include font-face('AvenirNext-Regular', 'AvenirNext-Regular', $folderAvenir, normal, 300);
 @include font-face('AvenirNext-Medium', 'AvenirNext-Medium', $folderAvenir, normal, 500);
 @include font-face('AvenirNext-Bold', 'AvenirNext-Bold', $folderAvenir, bold, 700);
+
+// CUTIVE
+$folderCutive: './cutive_mono';
+@include font-face('Cutive-Mono','CutiveMono-Regular', $folderCutive, normal, 300)

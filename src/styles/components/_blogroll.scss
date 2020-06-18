@@ -1,0 +1,79 @@
+// GRID
+.is-horizontal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.is-vertical {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.square {
+  height: 50vw;
+}
+
+// OVERLAY
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.overlay-title {
+  opacity: 1;
+  transition: 0.3s;
+  z-index: 2;
+  align-self: center;
+  position: absolute;
+  text-align: center;
+  color: black;
+  width: 90%;
+
+  h2 {
+    font-family: "AvenirNext-Bold";
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-family: "AvenirNext-Regular";
+    font-weight: 100;
+    font-size: 0.9rem;
+  }
+}
+
+.overlay-title:hover + .overlay{
+  opacity: 0.7;
+}
+
+
+.image-gallery {
+  overflow: hidden;
+}
+
+.gallery-tile-inner {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.gallery-tile-inner .overlay-title{
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.gallery-tile-inner:hover .overlay-title{
+  opacity: 1;
+}
+
+.overlay:hover {
+  opacity: 0.7;
+}
+
+.blog-list-item header {
+  display: grid;
+}

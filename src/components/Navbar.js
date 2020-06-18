@@ -10,7 +10,7 @@ const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isMounted: true,
+      isMounted: false,
       active: false,
       navBarActiveClass: '',
       scrollDirection: 'none',
@@ -18,7 +18,7 @@ const Navbar = class extends React.Component {
       menuOpen: false,
       atTop: true
     }
-    this.handleScroll = this.handleScroll.bind(this)
+    // this.handleScroll = this.handleScroll.bind(this)
   }
 
   componentDidMount() {

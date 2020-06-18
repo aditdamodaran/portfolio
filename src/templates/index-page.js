@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import github from '../img/github-icon.svg'
-import codepen from '../img/codepen-icon.svg'
+// import codepen from '../img/codepen-icon.svg'
 import linkedin from '../img/linkedin-icon.svg'
 import twitter from '../img/twitter-icon.svg'
 import Layout from '../components/Layout'
@@ -19,6 +19,7 @@ export const IndexPageTemplate = ({
   aboutme,
   description,
   intro,
+  index
 }) => (
   <div>
     <div
@@ -53,17 +54,12 @@ export const IndexPageTemplate = ({
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="GitHub">
+            <a href="https://github.com/aditdamodaran" className="" title="GitHub">
               <img className="social-icon" src={github} alt="Github" />
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="Codepen">
-              <img className="social-icon" src={codepen} alt="Codepen" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="Twitter">
+            <a href="https://twitter.com/AditDamodaran" className="" title="Twitter">
             <img className="social-icon" src={twitter} alt="Twitter" />
             </a>
           </li>
@@ -76,7 +72,7 @@ export const IndexPageTemplate = ({
     <section id="aboutme">
       <div className="about-me-container">
 
-        <div className="two-thirds">
+        <div className="left-half">
           <div className="about-me-left">
             <h1 className="about-me-title">
               {aboutme.title}
@@ -84,8 +80,7 @@ export const IndexPageTemplate = ({
             <h3 className="about-me-description">
               <div className="about-me-description-segment">{aboutme.description1}</div>
               <div className="about-me-description-segment">{aboutme.description2}</div>
-              <div className="about-me-description-segment">{aboutme.description3}</div>
-              <div className="about-me-description-segment">{aboutme.description4}</div>
+             
             </h3>
             {/*<div className="recent-technologies">Technologies I've been using recently:</div>
             <hr></hr>
@@ -96,7 +91,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
 
-        <div className="third">
+        <div className="right-half">
           <div className="about-me-right about-me-image-container">
             <PreviewCompatibleImage
               imageInfo={{
@@ -113,71 +108,22 @@ export const IndexPageTemplate = ({
 
     <section id="work">
       <div className="work-container">
+      <h1 className="work-experience-title">
+        Work Experience
+      </h1>
       <Work></Work>
       </div>
     </section>
 
-
-
-
-
-
+    <div className="blog-post-tiles">
+      <BlogRoll index={index}/>     
     </div>
 
 
 
 
-
-
-
-
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{aboutme.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>{/* Close LP Container */}
+  {/* Root Div */}
   </div>
 )
 
@@ -206,6 +152,7 @@ const IndexPage = ({ data }) => {
         aboutme={frontmatter.aboutme}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        index={true}
       />
     </Layout>
   )

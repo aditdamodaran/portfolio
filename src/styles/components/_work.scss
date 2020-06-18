@@ -1,6 +1,7 @@
 
 
 
+
 .work-timeline {
   // border: 1px solid white;
   display: flex;
@@ -10,11 +11,23 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  padding: 5rem 0rem;
+  padding-bottom: 7.5rem;
 }
 
 .tabs-container {
   // border: 1px solid red;
   flex-basis: 15%;
+  flex-shrink: 0;
+
+  .active {
+    border-left: 3px solid white;
+    background-color: #111;
+  }
+  .inactive {
+    border-left: 3px solid #222;
+    background-color: transparent;
+  }
 }
 
 .tabs {
@@ -32,12 +45,112 @@
 }
 
 .work-content-container {
-  flex-grow: 1;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  font-family: "AvenirNext-Regular";
+
+  li {
+    padding: 0;
+  }
+}
+
+.work-content {
+  width: 60%
 }
 
 
+.work-content-title {
+  font-size: calculatRem(30px);
+  width: 100%;
+}
+.work-content-date {
+  font-family: 'CutiveMono-Regular';
+  font-size: calculateRem(14px);
+}
+
+.work-content-bullet {
+  margin-top: 1rem;
+}
+.work-content-tech {
+  margin-top: 2rem;
+  width: 100%;
+}
+.technologies {
+  display: inline-block;
+}
+.technologies p {
+  font-family: 'CutiveMono-Regular';
+  display: inline;
+  margin: 0;
+  margin-right: 1rem;
+  font-size: calculatRem(18px);
+  color: black;
+  background-color: white;
+  padding: 0.2rem 1rem;
+}
+
+@include large {
+  .work-content-tech {
+    padding: 1rem 0rem;
+    background: white;
+  }
+
+  .technologies {
+    display: flex;
+    background-color: white;
+    padding: 0rem 1.5rem;
+  }
+
+  .technologies p {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
 
 @include tablet {
+  .work-container{
+    margin: 0 auto;
+    width: 90vw;
+  }
+  .work-timeline {
+    flex-wrap: wrap;
+  }
+  .tabs-container {
+    display: flex;
+    flex-basis: auto;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: calc(100%);
+  }
+  .tabs {
+    display: flex;
+    flex: 0 0 auto;
+  }
+  
+  .work-content-container {
+    flex-wrap: wrap;
+    overflow-x: hidden;
+  }
 
+  .work-content {
+    width: 90%;
+  }
+
+  .tabs-container {
+    .active {
+      border-left: none;
+      border-bottom: 3px solid white;
+    }
+    .inactive {
+      border-left: none;
+      border-bottom: 3px solid #222;
+    }
+  }
+
+  .work-content-tech {
+  }
+  
   
 }

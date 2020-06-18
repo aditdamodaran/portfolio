@@ -43,6 +43,10 @@ $desktop: 1280;
 
 
 // GLOBALS
+body {
+  overflow-x: hidden;
+}
+
 .padding-0 {
   padding: 0;
 }
@@ -52,12 +56,12 @@ $desktop: 1280;
 }
 
 .third {
-  flex-basis: 33%;
+  flex-basis: 40%;
   display: flex;
 }
 
 .two-thirds {
-  flex-basis: 66%;
+  flex-basis: 60%;
   display: flex;
 }
 
@@ -68,10 +72,15 @@ $desktop: 1280;
 }
 
 @include large {
-  .left-half,
-  .right-half,
+}
+
+@include mobile {
   .third,
   .two-thirds {
+    flex-basis: 100%;
+  }
+  .left-half,
+  .right-half {
     flex-basis: 100%;
   }
 }
