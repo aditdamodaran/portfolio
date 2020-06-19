@@ -1,0 +1,45 @@
+#aboutmepage {
+  padding: 3rem;
+  width: 70%;
+
+  .title, .content > h1 {
+    font-family: 'AvenirNext-Bold';
+    font-size: calculateRem(40px);
+    color: indianred;
+  }
+
+  .content > ul,
+  .content p {
+    font-family: 'AvenirNext-Regular';
+    font-size: calculateRem(32px);
+    line-height: 3rem;
+  }
+
+  .content > h1 {
+    font-family: 'AvenirNext-Bold';
+    font-size: calculateRem(40px);
+    color: indianred;
+  }
+
+  .content a {
+    color: indianred;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'AvenirNext-Regular';
+    font-weight: bold;
+  }
+}
+
+@include mobile {
+  #aboutmepage {
+    .title, .content > h1 {
+      font-size: calculateRem(30px);
+    }
+
+    .content > ul,
+    .content p {
+      font-size: calculateRem(20px);
+      line-height: 2rem;
+    }
+  }
+}

@@ -8,8 +8,8 @@ const workExperience = [
     role: 'Economist',
     active: true,
     bullets: [
-      'Analyzed Covid-19\'s impact on U.S./Canadian flight operations and airfare, and compiled a report with my findings',
-      'Created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers'
+      `Analyzed Covid-19\'s impact on U.S./Canadian flight operations and airfare, and compiled a report with my findings`,
+      `Created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers`
     ],
     technologies: ['Python (Pandas/Plotly)', 'Google Cloud Platform', 'SQL', ]
   },

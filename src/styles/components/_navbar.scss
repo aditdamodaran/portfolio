@@ -39,6 +39,16 @@
   opacity: 0;
 }
 
+.display-logo {
+  opacity: 0.7;
+}
+
+.display-logo:hover {
+  opacity: 0.3;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
 .navbar-burger {
   display: none;
 }

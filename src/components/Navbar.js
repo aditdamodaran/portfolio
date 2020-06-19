@@ -111,6 +111,7 @@ const Navbar = class extends React.Component {
 
   
   render() {
+    console.log(this.state.atTop)
     return (
       <nav
         className="navbar"
@@ -120,11 +121,10 @@ const Navbar = class extends React.Component {
           transition: 'transform 0.3s ease-out, background-color 0.3s ease-out, box-shadow 0.3s ease-out',
           backgroundColor: (this.state.scrollDirection === 'down' || this.state.atTop ? `transparent` : `white`),
           boxShadow : (this.state.atTop ? `none` : `0 1px 30px -10px #333`),
-          transform : (this.state.scrollDirection === 'down' ? `translateY(-3rem)` : `translateY(0rem)`)
+          transform : (this.state.scrollDirection === 'down' && !this.state.atTop ? `translateY(-3rem)` : `translateY(0rem)`),
         }}
       >
         <div className="container">
-
           <CSSTransition
           in={this.state.active}
           timeout={400}
@@ -144,7 +144,7 @@ const Navbar = class extends React.Component {
 
           <div className="navbar-brand">
             {/* LOGO */}
-            <Link to="/" className="navbar-logo" title="Logo">
+            <Link to="/" className={`navbar-logo ${this.props.index ? null : `display-logo`}`} title="Logo">
               <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
             </Link>
           </div>
@@ -160,10 +160,10 @@ const Navbar = class extends React.Component {
                 <Link className="navbar-item" to="/about">
                   About
                 </Link>
-                <Link className="navbar-item" to="/products">
+                <Link className="navbar-item" to="/#work">
                   Experience
                 </Link>
-                <Link className="navbar-item" to="/contact/examples">
+                <Link className="navbar-item" to="/#projects">
                   Projects
                 </Link>
                 <Link className="navbar-item" to="/blog">
