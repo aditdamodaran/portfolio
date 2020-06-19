@@ -36,7 +36,7 @@ work:
       tech: ['Python (lxml + Pandas)', 'Selenium', 'Kivy']
 intro:
   blurbs:
-    - image: /img/andrecastroracingbg.png
+    - image: /img/andrecastroracingbg.jpg
       title: >
         Andre Castro Racing (2020)
       text: >
@@ -44,14 +44,14 @@ intro:
       tech: ['React', 'Gatsby v2', 'Netlify (CMS)', 'SASS', 'Bulma (CSS)', 'Javascript']
       link: 'andrecastroracing.com'
       github: 'andrecastroracing'
-    - image: /img/midwayvcbg.png
+    - image: /img/midwayvcbg.jpg
       title: >
         Midway Ventures (2018)
       text: >
         Midway Ventures was founded in 2014 as a student organization at the University of Chicago to help VC firms identify, diligence, and source promising student startups, and to work directly with startups on projects related to fundraising and business development.
       tech: ['HTML', 'LESS','JavaScript', 'Squarespace Dev Platform', 'jQuery', 'Greensock']
       link: 'midwayvc.com'
-    - image: /img/sublilandingbg.png
+    - image: /img/sublilandingbg.jpg
       title: >
         Subli (2020)
       text: >
