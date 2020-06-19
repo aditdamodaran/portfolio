@@ -11,7 +11,7 @@ section.main-landing{
   // left: 0;
   top: -3rem;
   height: 100vh;
-  background-color: white;
+  background-color: $primary-background;
 }
 
 .landing-page-copy-container {
@@ -101,13 +101,22 @@ section.main-landing{
   }
 }
 
+// FILLER
+.filler {
+  background: $primary-background;
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  top: 100vh;
+}
+
 // ABOUT
 
 section#aboutme{
   position: relative;
   width: 100%;
   // left: 0;
-  background-color: $secondary-background;
+  background-color: $primary-background;
 }
 
 
@@ -143,14 +152,14 @@ section#aboutme{
 
 
 .about-me-title {
-  color: white;
+  color: $secondary-text;
   font-family: 'AvenirNext-Regular';
   font-size: calculateRem(36px);
 }
 
 .about-me-description,
 .recent-technologies {
-  color: white;
+  color: $secondary-text;
   font-family: 'Avenir-Light';
   font-size: calculateRem(18px);
   font-weight: 100;
@@ -158,6 +167,7 @@ section#aboutme{
 
 .about-me-description-segment {
   margin: 1rem 0rem;
+  line-height: 1.5rem;
 }
 
 .recent-technologies {
@@ -181,17 +191,55 @@ section#work{
   position: relative;
   width: 100%;
   padding: 2rem 0rem;
+  background-color: $primary-background;
+  display: grid;
+  align-content: center;
+}
+
+.work-container{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem 0rem;
+  padding-bottom: 7.5rem;
+}
+
+.work-experience-title {
+  color: $secondary-text;
+  font-family: 'AvenirNext-Regular';
+  font-size: calculateRem(36px);
+}
+
+section#projects{
+  position: relative;
+  width: 100%;
   background-color: black;
   display: grid;
   align-content: center;
 }
 
-.work-experience-title {
+.projects-title-container,
+.blog-title-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 0rem;
+}
+
+.blog-title,
+.projects-title {
   color: white;
   font-family: 'AvenirNext-Regular';
   font-size: calculateRem(36px);
 }
 
+section#blog {
+  background-color: black;
+}
+
+.blog-title {
+  color: white;
+}
 
 
 

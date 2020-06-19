@@ -1,18 +1,6 @@
-
-
-
-
 .work-timeline {
   // border: 1px solid white;
   display: flex;
-}
-
-.work-container{
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 5rem 0rem;
-  padding-bottom: 7.5rem;
 }
 
 .tabs-container {
@@ -21,11 +9,11 @@
   flex-shrink: 0;
 
   .active {
-    border-left: 3px solid white;
-    background-color: #111;
+    border-left: 3px solid #333;
+    background-color: #eee;
   }
   .inactive {
-    border-left: 3px solid #222;
+    border-left: 3px solid #ccc;
     background-color: transparent;
   }
 }
@@ -35,7 +23,7 @@
   padding: 1rem;
   transition: 0.3s ease;
   font-family: "AvenirNext-Regular";
-
+  color: black;
 }
 
 .tabs:hover {
@@ -54,7 +42,8 @@
 }
 
 .work-content {
-  width: 60%
+  width: 60%;
+  color: $secondary-text;
 }
 
 
@@ -65,6 +54,7 @@
 .work-content-date {
   font-family: 'CutiveMono-Regular';
   font-size: calculateRem(14px);
+  font-weight: bold;
 }
 
 .work-content-bullet {
@@ -83,20 +73,20 @@
   margin: 0;
   margin-right: 1rem;
   font-size: calculatRem(18px);
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: $secondary-text;
   padding: 0.2rem 1rem;
 }
 
 @include large {
   .work-content-tech {
     padding: 1rem 0rem;
-    background: white;
+    background: darken($secondary-text, 20%);
   }
 
   .technologies {
     display: flex;
-    background-color: white;
+    background-color: darken($secondary-text, 20%);
     padding: 0rem 1.5rem;
   }
 
@@ -141,11 +131,11 @@
   .tabs-container {
     .active {
       border-left: none;
-      border-bottom: 3px solid white;
+      border-bottom: 3px solid black;
     }
     .inactive {
       border-left: none;
-      border-bottom: 3px solid #222;
+      border-bottom: 3px solid #ccc;
     }
   }
 

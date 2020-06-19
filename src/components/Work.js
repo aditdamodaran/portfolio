@@ -23,7 +23,7 @@ const workExperience = [
       'Developed front-end in Vue.JS/Nuxt, built subtitle functionality for videos, and added animations to Intel’s Point-of-Sale (IPOS) software, which ships internationally in +20 languages retail PCs with Intel processors',
       'Collaborated with the engineering and QA teams to reduce technical debt, track progress in Jira, and document changes in Storybook — code reviewed by the agency’s national front-end lead and merged into production'
     ],
-    technologies: ['Vue', 'Nuxt', 'Git', 'Javascript', 'HTML/SCSS', 'NVM/NPM']
+    technologies: ['Vue', 'Nuxt', 'Git', 'JavaScript', 'HTML/SCSS', 'NVM/NPM']
   },
   {
     company: 'Chicago Ventures',

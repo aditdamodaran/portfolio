@@ -44,6 +44,10 @@
   }
 }
 
+a.focus + .overlay {
+  opacity: 0.7;
+}
+
 .overlay-title:hover + .overlay{
   opacity: 0.7;
 }
@@ -61,7 +65,7 @@
   display: flex;
 }
 
-.gallery-tile-inner .overlay-title{
+.gallery-tile-inner .overlay-title {
   opacity: 0;
   transition: 0.3s;
 }
@@ -70,7 +74,7 @@
   opacity: 1;
 }
 
-.overlay:hover {
+.overlay:hover, a:focus {
   opacity: 0.7;
 }
 

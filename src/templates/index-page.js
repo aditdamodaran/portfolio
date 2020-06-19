@@ -9,6 +9,7 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import Work from '../components/Work'
+import Project from '../components/Project'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const IndexPageTemplate = ({
@@ -18,7 +19,9 @@ export const IndexPageTemplate = ({
   subheading,
   aboutme,
   description,
+  work,
   intro,
+  older,
   index
 }) => (
   <div>
@@ -68,6 +71,7 @@ export const IndexPageTemplate = ({
       
     </section>
 
+    <section className="filler"></section>
 
     <section id="aboutme">
       <div className="about-me-container">
@@ -115,9 +119,100 @@ export const IndexPageTemplate = ({
       </div>
     </section>
 
-    <div className="blog-post-tiles">
-      <BlogRoll index={index}/>     
-    </div>
+    <section id="projects">
+      <div className="projects-title-container">
+        <h1 className="projects-title">
+          Work Related Projects
+        </h1>
+      </div>
+      <div className="projects-container">
+        <Project
+          title={work.projects[0].title}
+          image={work.projects[0].image}
+          text={work.projects[0].text}
+          tech={work.projects[0].tech}
+          work={true}
+        />
+        <Project
+          title={work.projects[1].title}
+          image={work.projects[1].image}
+          text={work.projects[1].text}
+          tech={work.projects[1].tech}
+          work={true}
+        />
+      </div>
+
+      <div className="projects-title-container">
+        <h1 className="projects-title">
+          Side Projects & Freelancing
+        </h1>
+      </div>
+    
+      <div className="projects-container">
+        <Project
+          title={intro.blurbs[0].title}
+          image={intro.blurbs[0].image}
+          text={intro.blurbs[0].text}
+          tech={intro.blurbs[0].tech}
+          link={intro.blurbs[0].link}
+          github={intro.blurbs[0].github}
+        />
+        <Project
+          title={intro.blurbs[1].title}
+          image={intro.blurbs[1].image}
+          text={intro.blurbs[1].text}
+          tech={intro.blurbs[1].tech}
+          link={intro.blurbs[1].link}
+        />
+        <Project
+          title={intro.blurbs[2].title}
+          image={intro.blurbs[2].image}
+          text={intro.blurbs[2].text}
+          tech={intro.blurbs[2].tech}
+        />
+      </div>
+
+      <div className="projects-title-container">
+        <h1 className="projects-title">
+          Older Projects (Archived)
+        </h1>
+      </div>
+      <div className="projects-container">
+        <Project
+          title={older.projects[0].title}
+          image={older.projects[0].image}
+          tech={older.projects[0].tech}
+          github={older.projects[0].github}
+          work={true}
+        />
+        <Project
+          title={older.projects[1].title}
+          image={older.projects[1].image}
+          tech={older.projects[1].tech}
+          github={older.projects[1].github}
+          work={true}
+        />
+        <Project
+          title={older.projects[2].title}
+          image={older.projects[2].image}
+          tech={older.projects[2].tech}
+          github={older.projects[2].github}
+          work={true}
+        />
+      </div>
+
+    </section>
+    
+    <section id="blog">
+      <div className="blog-title-container">
+      <h1 className="blog-title">
+        Blog
+      </h1>
+      </div>
+      <div className="blog-post-tiles">
+        <BlogRoll index={index}/>     
+      </div>
+    </section>
 
 
 
@@ -151,7 +246,9 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         aboutme={frontmatter.aboutme}
         description={frontmatter.description}
+        work={frontmatter.work}
         intro={frontmatter.intro}
+        older={frontmatter.older}
         index={true}
       />
     </Layout>
@@ -197,19 +294,52 @@ export const pageQuery = graphql`
           } 
         }
         description
-        intro {
-          blurbs {
+        work {
+          projects {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 900, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
+            title
             text
+            tech
+          }
+        }
+        intro {
+          blurbs {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 900, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            title
+            text
+            tech
+            link
+            github
           }
           heading
           description
+        }
+        older {
+          projects {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 900, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            title
+            text
+            tech
+            github
+          }
         }
       }
     }

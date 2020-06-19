@@ -1,0 +1,90 @@
+.projects-container {
+   background-color: $primary-background;
+   padding: 4rem 0rem;
+}
+
+.project-container {
+  padding: 1rem 0rem;
+  color: $secondary-text;
+  width: 100%;
+  background: $primary-background;
+}
+
+.project-spacing {
+  margin: auto;
+  width: 80%;
+}
+
+.project-title {
+  color: $secondary-text;
+  font-family: 'Avenir-Light';
+  font-size: calculateRem(30px);
+}
+
+.project-links {
+  margin: 1rem auto;
+} 
+
+.project-links > div {
+  font-family: "Avenir-Light";
+  display: inline;
+  margin-right: 1rem;
+}
+
+.project-description {
+  line-height: 1.5rem;
+  margin: 1rem auto;
+  color: $secondary-text;
+  font-family: 'Avenir-Light';
+  font-size: calculateRem(16px);
+}
+
+.project-tech {
+  padding-bottom: 1rem;
+}
+
+.project-tile {
+  margin: 1rem auto;
+  padding: 3rem;
+  width: calc(75% - 2rem);
+  height: 37.5vw;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+  border: 1px solid lighten($secondary-text, 60%);
+}
+
+.work-related {
+  height: 12.5vw;
+}
+
+.project-tile:hover {
+  cursor: pointer;
+  opacity: 0.6 !important;
+}
+
+@include mobile {
+  .project-container {
+    padding: 2rem 0rem;
+  }
+  
+  .project-container:first-child{
+    padding-top: 0rem;
+    padding-bottom: 2rem;
+  }
+  
+  .project-container:last-child{
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+  }
+
+  .project-tile {
+    padding: 0;
+    width: calc(100% - 2rem);
+    height: 55vw;
+  }
+
+  .work-related {
+    height: 25vw;
+  }
+}
