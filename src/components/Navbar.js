@@ -51,23 +51,24 @@ const Navbar = class extends React.Component {
     const fromTop = window.scrollY
     const DELTA = 10
     const navHeight = 3
+    const fromTopDelta = 25
     // console.log(isMounted, scrollDirection, lastScrollTop, fromTop)
 
     // Make sure they scroll more than DELTA (to reveal Navbar)
     // Make sure the menu isn't open
     // Make sure they aren't near the top (to hide Navbar) 
-    if (fromTop < 100){
+    if (fromTop < fromTopDelta){
       this.setState({ atTop: true });
     }
     
     if (!isMounted 
       || Math.abs(lastScrollTop - fromTop) <= DELTA 
       || menuOpen
-      || fromTop < 100) {
+      || fromTop < fromTopDelta) {
       return;
     }
 
-    if (fromTop > 100){
+    if (fromTop > fromTopDelta){
       this.setState({ atTop: false });
     }
 
@@ -111,7 +112,6 @@ const Navbar = class extends React.Component {
 
   
   render() {
-    console.log(this.state.atTop)
     return (
       <nav
         className="navbar"
