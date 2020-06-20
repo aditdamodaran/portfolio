@@ -131,6 +131,7 @@ export const IndexPageTemplate = ({
           image={work.projects[0].image}
           text={work.projects[0].text}
           tech={work.projects[0].tech}
+          pageLink={work.projects[0].pageLink}
           work={true}
         />
         <Project
@@ -138,6 +139,7 @@ export const IndexPageTemplate = ({
           image={work.projects[1].image}
           text={work.projects[1].text}
           tech={work.projects[1].tech}
+          pageLink={work.projects[1].pageLink}
           work={true}
         />
       </div>
@@ -155,6 +157,7 @@ export const IndexPageTemplate = ({
           text={intro.blurbs[0].text}
           tech={intro.blurbs[0].tech}
           link={intro.blurbs[0].link}
+          pageLink={intro.blurbs[0].pageLink}
           github={intro.blurbs[0].github}
         />
         <Project
@@ -162,12 +165,14 @@ export const IndexPageTemplate = ({
           image={intro.blurbs[1].image}
           text={intro.blurbs[1].text}
           tech={intro.blurbs[1].tech}
+          pageLink={intro.blurbs[1].pageLink}
           link={intro.blurbs[1].link}
         />
         <Project
           title={intro.blurbs[2].title}
           image={intro.blurbs[2].image}
           text={intro.blurbs[2].text}
+          pageLink={intro.blurbs[2].pageLink}
           tech={intro.blurbs[2].tech}
         />
       </div>
@@ -183,6 +188,7 @@ export const IndexPageTemplate = ({
           image={older.projects[0].image}
           tech={older.projects[0].tech}
           github={older.projects[0].github}
+          pageLink={older.projects[0].pageLink}
           work={true}
         />
         <Project
@@ -190,6 +196,7 @@ export const IndexPageTemplate = ({
           image={older.projects[1].image}
           tech={older.projects[1].tech}
           github={older.projects[1].github}
+          pageLink={older.projects[1].pageLink}
           work={true}
         />
         <Project
@@ -197,6 +204,7 @@ export const IndexPageTemplate = ({
           image={older.projects[2].image}
           tech={older.projects[2].tech}
           github={older.projects[2].github}
+          pageLink={older.projects[2].pageLink}
           work={true}
         />
       </div>
@@ -236,7 +244,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+  console.log(frontmatter.work)
   return (
     <Layout index={true}>
       <IndexPageTemplate
@@ -298,7 +306,7 @@ export const pageQuery = graphql`
           projects {
             image {
               childImageSharp {
-                fluid(maxWidth: 900, quality: 100) {
+                fluid(maxWidth: 1200, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -306,13 +314,14 @@ export const pageQuery = graphql`
             title
             text
             tech
+            pageLink
           }
         }
         intro {
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 900, quality: 100) {
+                fluid(maxWidth: 1200, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -322,6 +331,7 @@ export const pageQuery = graphql`
             tech
             link
             github
+            pageLink
           }
           heading
           description
@@ -330,7 +340,7 @@ export const pageQuery = graphql`
           projects {
             image {
               childImageSharp {
-                fluid(maxWidth: 900, quality: 100) {
+                fluid(maxWidth: 1200, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -339,6 +349,7 @@ export const pageQuery = graphql`
             text
             tech
             github
+            pageLink
           }
         }
       }

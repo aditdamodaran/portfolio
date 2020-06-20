@@ -11,17 +11,19 @@ import Content, { HTMLContent } from '../components/Content'
 export const ProjectPageTemplate = ({
   title,
   image,
+  imageLarge,
   heading,
   content,
   contentComponent
 }) => {
   const PageContent = contentComponent || Content
+  console.log(imageLarge)
   return (
     <div>
       <section id="projectpage">
         <h1>{title}</h1>
         {image ? <BackgroundImage
-          className={`projectpage-image`}
+          className={`projectpage-image ${imageLarge ? `projectpage-image-large` : null}`}
           fluid={image.childImageSharp.fluid}
         > 
         </BackgroundImage>: null}
@@ -45,6 +47,7 @@ const ProjectPage = ({ data }) => {
       <ProjectPageTemplate
         title={frontmatter.title}
         image={frontmatter.image}
+        imageLarge={frontmatter.imageLarge}
         heading={frontmatter.heading}
         content={data.markdownRemark.html}
         contentComponent={HTMLContent}
@@ -75,6 +78,7 @@ export const projectPageQuery = graphql`
             }
           }
         }
+        imageLarge
         heading
       }
       html

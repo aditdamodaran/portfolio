@@ -31,7 +31,7 @@ section#projectpage{
     color: darken($blue-link, 10%);
   }
 
-  div.subtitle,
+  .subtitle,
   .content > p > img {
     width: 70%;
     display: flex;
@@ -41,12 +41,36 @@ section#projectpage{
     text-align: center;
   }
 
+  .subtitle {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .image-25,
+  .image-25 + p > img{
+    width: 25% !important;
+  }
+
+  .image-50,
+  .image-50 + p > img{
+    width: 50% !important;
+  }
+
+  .image-100,
+  .image-100 + p > img{
+    width: 100% !important;
+  }
+
 }
 
 
 .projectpage-image {
   width: 100%;
   height: 18vw;
+}
+
+.projectpage-image-large {
+  height: 40vw;
 }
 
 div.quote {
@@ -73,11 +97,22 @@ div.quote {
       line-height: 2rem;
     }
 
-    div.subtitle,
+    .subtitle,
     .content > p > img {
       width: 90%;
       font-size: calculateRem(16px);
       line-height: 1.5rem;
+    }
+
+    .subtitle {
+      justify-content: center;
+    }
+
+    .image-25,
+    .image-25 + p > img,
+    .image-50,
+    .image-50 + p > img{
+      width: 100% !important;
     }
 
   }
@@ -97,5 +132,8 @@ div.quote {
   .projectpage-image {
     width: 100%;
     height: 22.5vw;
+  }
+  .projectpage-image-large {
+    height: 50vw;
   }
 }

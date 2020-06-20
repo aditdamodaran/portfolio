@@ -1,9 +1,10 @@
 ---
 templateKey: 'project-page'
 path: /projects/ipos
-title: Intel-Point-of-Sale (2019)
+title: Intel-Point-of-Sale
 image: /img/ipos.jpg
-heading: Great coffee with a conscience
+imageLarge: false
+heading:  
 ---
 
 During the summer of 2019, I had the privilege of working with the amazing Technology team at Digitas NA in Chicago as a Front-End Software Engineering Intern. During my time at Digitas, I worked on Intel’s “Intelligent Point of Sale (IPOS)” software.

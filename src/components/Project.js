@@ -1,5 +1,6 @@
 import React from 'react'
 import BackgroundImage from 'gatsby-background-image'
+import { Link } from 'gatsby'
 
 class Project extends React.Component {
   constructor(props){
@@ -37,11 +38,16 @@ class Project extends React.Component {
             <div key={idx} className="technologies"><p>{tech}</p></div>
           )) : null }
         </div> : null}
-        <BackgroundImage
-          className={`project-tile ${this.props.work ? 'work-related' : null}`}
-          fluid={this.props.image.childImageSharp.fluid}
-        >
-        </BackgroundImage>
+        {console.log(this.props.pageLink)}
+        {this.props.image ?
+          <Link to={`/projects/${this.props.pageLink}`}>
+            <BackgroundImage
+              className={`project-tile ${this.props.work ? 'work-related' : null}`}
+              fluid={this.props.image.childImageSharp.fluid}
+            > 
+            </BackgroundImage> 
+          </Link>
+        : null}
       </div>
     )
   }
