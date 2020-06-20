@@ -2,105 +2,112 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Project from '../components/Project'
 
 export const ProductPageTemplate = ({
   image,
   title,
   heading,
+  subheading,
+  aboutme,
   description,
+  work,
   intro,
-  main,
-  testimonials,
-  fullImage,
-  pricing,
+  older
 }) => (
   <div className="content">
-    <div
-      className="full-width-image-container margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    >
-      <h2
-        className="has-text-weight-bold is-size-1"
-        style={{
-          boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-          backgroundColor: '#f40',
-          color: 'white',
-          padding: '1rem',
-        }}
-      >
-        {title}
-      </h2>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-7 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
-              <p>{description}</p>
-            </div>
-          </div>
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <Features gridItems={intro.blurbs} />
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    {main.heading}
-                  </h3>
-                  <p>{main.description}</p>
-                </div>
-              </div>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
-                    </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image2} />
-                      </article>
-                    </div>
-                  </div>
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image3} />
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <Testimonials testimonials={testimonials} />
-              <div
-                className="full-width-image-container"
-                style={{
-                  backgroundImage: `url(${
-                    fullImage.childImageSharp
-                      ? fullImage.childImageSharp.fluid.src
-                      : fullImage
-                  })`,
-                }}
-              />
-              <h2 className="has-text-weight-semibold is-size-2">
-                {pricing.heading}
-              </h2>
-              <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <section id="projects">
+  <div className="projects-title-container">
+    <h1 className="projects-title">
+      Work Related Projects
+    </h1>
+  </div>
+  <div className="projects-container">
+    <Project
+      title={work.projects[0].title}
+      image={work.projects[0].image}
+      text={work.projects[0].text}
+      tech={work.projects[0].tech}
+      pageLink={work.projects[0].pageLink}
+      work={true}
+    />
+    <Project
+      title={work.projects[1].title}
+      image={work.projects[1].image}
+      text={work.projects[1].text}
+      tech={work.projects[1].tech}
+      pageLink={work.projects[1].pageLink}
+      work={true}
+    />
+  </div>
+
+  <div className="projects-title-container">
+    <h1 className="projects-title">
+      Side Projects & Freelancing
+    </h1>
+  </div>
+
+  <div className="projects-container">
+    <Project
+      title={intro.blurbs[0].title}
+      image={intro.blurbs[0].image}
+      text={intro.blurbs[0].text}
+      tech={intro.blurbs[0].tech}
+      link={intro.blurbs[0].link}
+      pageLink={intro.blurbs[0].pageLink}
+      github={intro.blurbs[0].github}
+    />
+    <Project
+      title={intro.blurbs[1].title}
+      image={intro.blurbs[1].image}
+      text={intro.blurbs[1].text}
+      tech={intro.blurbs[1].tech}
+      pageLink={intro.blurbs[1].pageLink}
+      link={intro.blurbs[1].link}
+    />
+    <Project
+      title={intro.blurbs[2].title}
+      image={intro.blurbs[2].image}
+      text={intro.blurbs[2].text}
+      pageLink={intro.blurbs[2].pageLink}
+      tech={intro.blurbs[2].tech}
+    />
+  </div>
+
+  <div className="projects-title-container">
+    <h1 className="projects-title">
+      Older Projects (Archived)
+    </h1>
+  </div>
+  <div className="projects-container">
+    <Project
+      title={older.projects[0].title}
+      image={older.projects[0].image}
+      tech={older.projects[0].tech}
+      github={older.projects[0].github}
+      pageLink={older.projects[0].pageLink}
+      work={true}
+    />
+    <Project
+      title={older.projects[1].title}
+      image={older.projects[1].image}
+      tech={older.projects[1].tech}
+      github={older.projects[1].github}
+      pageLink={older.projects[1].pageLink}
+      work={true}
+    />
+    <Project
+      title={older.projects[2].title}
+      image={older.projects[2].image}
+      tech={older.projects[2].tech}
+      github={older.projects[2].github}
+      pageLink={older.projects[2].pageLink}
+      work={true}
+    />
+  </div>
+
+</section>
+    
   </div>
 )
 
@@ -137,12 +144,12 @@ const ProductPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
+        subheading={frontmatter.subheading}
+        aboutme={frontmatter.aboutme}
         description={frontmatter.description}
+        work={frontmatter.work}
         intro={frontmatter.intro}
-        main={frontmatter.main}
-        testimonials={frontmatter.testimonials}
-        fullImage={frontmatter.full_image}
-        pricing={frontmatter.pricing}
+        older={frontmatter.older}
       />
     </Layout>
   )
@@ -171,74 +178,70 @@ export const productPageQuery = graphql`
           }
         }
         heading
+        subheading
+        aboutme {
+          title
+          description1
+          description2
+          description3
+          description4
+          image {
+            childImageSharp {
+              fluid(maxWidth: 500, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          } 
+        }
         description
+        work {
+          projects {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1200, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            title
+            text
+            tech
+            pageLink
+          }
+        }
         intro {
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 1200, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
+            title
             text
+            tech
+            link
+            github
+            pageLink
           }
           heading
           description
         }
-        main {
-          heading
-          description
-          image1 {
-            alt
+        older {
+          projects {
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
+                fluid(maxWidth: 1200, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
-          }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-        testimonials {
-          author
-          quote
-        }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
-            price
+            title
+            text
+            tech
+            github
+            pageLink
           }
         }
       }

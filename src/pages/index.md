@@ -52,7 +52,7 @@ intro:
         Midway Ventures (2018)
       text: >
         Midway Ventures was founded in 2014 as a student organization at the University of Chicago to help VC firms identify, diligence, and source promising student startups, and to work directly with startups on projects related to fundraising and business development.
-      tech: ['HTML', 'LESS','JavaScript', 'Squarespace Dev Platform', 'jQuery', 'Greensock']
+      tech: ['JavaScript', 'Squarespace Dev Platform', 'jQuery', 'Greensock', 'HTML', 'LESS',]
       link: 'midwayvc.com'
       pageLink: 'midwayvc'
     - image: /img/sublilandingbg.jpg
@@ -60,7 +60,7 @@ intro:
         Subli (2020)
       text: >
         Subli, the 2020 UChicago College New Venture Challenge winner, is a student-run startup that made a free peer-to-peer marketplace to find and list student housing. I worked with Subli to design and develop a landing page that would emphasize their brand's simplicity and honesty while increasing conversions.
-      tech: ['HTML', 'LESS', 'JavaScript']
+      tech: ['JavaScript', 'LESS', 'HTML']
       pageLink: 'subli'
     - image: /img/meeting-space.png
       title: >
