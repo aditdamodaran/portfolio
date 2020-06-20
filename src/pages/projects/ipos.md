@@ -17,7 +17,7 @@ During the summer of 2019, I had the privilege of working with the amazing Techn
 
 IPOS is an application you might run into if you’re shopping for a PC at a retail store (like Best Buy, Staples, Walmart, Target, etc.). It ships in ~20 languages to retail stores internationally. I’m borrowing this description from Mark Montri because I think it describes IPOS perfectly:
 
-> <div class="quote">
+<div class="quote">
 IPOS enables retail shoppers to learn about and explore the capabilities of Intel devices without the pressure of a salesperson. The software, which is installed on thousands of devices in computer showrooms around the world, automatically detects the system specifications of the device and displays this information in an easy-to-understand, interactive experience that educates the shopper. Additionally, a cloud-based admin panel allows retailers to control and modify hundreds of devices at a time, enabling them to customize prices, promotions, and branding. <br><br> &mdash;  Mark Montri, (markmontri.com)
 </div>
 
