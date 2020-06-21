@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import github from '../img/github-icon.svg'
 // import codepen from '../img/codepen-icon.svg'
 import linkedin from '../img/linkedin-icon.svg'
+import heart from '../img/heart.svg'
 import twitter from '../img/twitter-icon.svg'
 import Layout from '../components/Layout'
 // import Features from '../components/Features'
@@ -35,7 +36,7 @@ export const IndexPageTemplate = ({
         <h1
           className="landing-page-primary-copy"
         >
-          <span className="name">Adit Damodaran</span> is a builder at <span className="heart">❤</span>
+          <span className="name">Adit Damodaran</span> is a builder at <span className="heart"><img src={heart} alt="heart" /></span>
         </h1>
         <div className="flex-break"></div>
         <h3
