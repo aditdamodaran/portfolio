@@ -124,7 +124,6 @@
 
     span {
       transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
       border: 1px solid $secondary-background;
       width: 1.5rem;
       position: absolute;
@@ -152,12 +151,10 @@
     }
     span:nth-child(2) {
       rotate: 45deg;
-      -webkit-transform: rotate(45deg);
       transition: rotate 0.5s ease;
     }
     span:nth-child(3) {
       rotate: -45deg;
-      -webkit-transform: rotate(-45deg);
       transition: rotate 0.5s ease;
     }
     * {
@@ -173,11 +170,9 @@
     }
     span:nth-child(2) {
       rotate: 45deg;
-      -webkit-transform: rotate(45deg);
     }
     span:nth-child(3) {
       rotate: -45deg;
-      -webkit-transform: rotate(-45deg);
     }
     * {
       border: 1px solid $tertiary-background;
@@ -192,12 +187,10 @@
     }
     span:nth-child(2) {
       rotate: 0deg;
-      -webkit-transform: rotate(0deg);
       transition: rotate 0.5s ease;
     }
     span:nth-child(3) {
       rotate: 0deg;
-      -webkit-transform: rotate(0deg);
       transition: rotate 0.5s ease;
     }
     * {

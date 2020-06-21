@@ -144,9 +144,11 @@ const Navbar = class extends React.Component {
 
           <div className="navbar-brand">
             {/* LOGO */}
+            {!this.props.index ? 
             <Link to="/" className={`navbar-logo ${this.props.index ? null : `display-logo`}`} title="Logo">
               <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
             </Link>
+            : null}
           </div>
 
           {/* NAVLINKS */}
