@@ -45,7 +45,6 @@ class Project extends React.Component {
             <div key={idx} className="technologies"><p>{tech}</p></div>
           )) : null }
         </div> : null}
-        {console.log(this.props.pageLink)}
         {this.props.image ?
           <Link to={`/projects/${this.props.pageLink}`}>
             <BackgroundImage

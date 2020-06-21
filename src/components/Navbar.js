@@ -10,7 +10,7 @@ const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isMounted: false,
+      isMounted: !this.props.index,
       active: false,
       navBarActiveClass: '',
       scrollDirection: 'none',
@@ -22,31 +22,35 @@ const Navbar = class extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(
-      () =>
-        this.setState({ isMounted: true }, () => {
-          const throttle = (func, wait = 250) => {
-            let timer = null;
-            return function(...args) {
-              if (timer === null) {
-                timer = setTimeout(() => {
-                  func.apply(this, args);
-                  timer = null;
-                }, wait);
+    // console.log(`DidMount() isMounted: ${this.state.isMounted} Index: ${this.props.index}`)
+      setTimeout(
+        () =>
+          this.setState({ isMounted: true }, () => {
+            const throttle = (func, wait = 250) => {
+              let timer = null;
+              return function(...args) {
+                if (timer === null) {
+                  timer = setTimeout(() => {
+                    func.apply(this, args);
+                    timer = null;
+                  }, wait);
+                }
               }
             }
-          }
-          window.addEventListener('scroll', () => throttle(this.handleScroll()))
-        }),
-      250,
-    );
+            window.addEventListener('scroll', () => throttle(this.handleScroll()))
+          }),
+        250,
+      );
   }
 
   componentWillUnmount() {
+    // console.log(`WillUnmount() isMounted: ${this.state.isMounted} Index: ${this.props.index}`)
+    // console.log(this.state.isMounted)
     window.removeEventListener('scroll', () => this.handleScroll())
   }
 
   handleScroll = () => {
+    // console.log('handleScroll')
     const { isMounted, scrollDirection, lastScrollTop, menuOpen, atTop } = this.state
     const fromTop = window.scrollY
     const DELTA = 10
@@ -57,6 +61,11 @@ const Navbar = class extends React.Component {
     // Make sure they scroll more than DELTA (to reveal Navbar)
     // Make sure the menu isn't open
     // Make sure they aren't near the top (to hide Navbar) 
+    if (!isMounted){
+      return;
+    }
+
+
     if (fromTop < fromTopDelta){
       this.setState({ atTop: true });
     }
@@ -72,7 +81,6 @@ const Navbar = class extends React.Component {
       this.setState({ atTop: false });
     }
 
-    
     // Determine Scroll Direction
     if (fromTop < DELTA) {
       this.setState({ scrollDirection: 'none' });
@@ -90,6 +98,7 @@ const Navbar = class extends React.Component {
   }
 
   toggleHamburger = () => {
+    // console.log('toggleHam')
     // toggle the active boolean in the state
     this.setState(
       {
@@ -112,6 +121,7 @@ const Navbar = class extends React.Component {
 
   
   render() {
+    // console.log(`render() isMounted: ${this.state.isMounted} Index: ${this.props.index}`)
     return (
       <nav
         className="navbar"
