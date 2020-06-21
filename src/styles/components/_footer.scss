@@ -15,8 +15,9 @@ footer .logo {
 }
 
 .footer-content-container {
+  margin: 0 auto;
   padding: 2rem 1rem;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -24,6 +25,7 @@ footer .logo {
   font-family: "AvenirNext-Bold";
   flex-wrap: wrap;
   line-height: 2rem;
+  font-size: calculateRem(14px);
 }
 
 .footer-content-container a {
