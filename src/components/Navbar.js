@@ -159,13 +159,13 @@ const Navbar = class extends React.Component {
               className={`navbar-menu ${this.state.navBarActiveClass}`}
             >
               <div className="navbar-start">
-                <Link className="navbar-item" to="/about">
+                <Link className="navbar-item" to="/about" onClick={() => this.toggleHamburger()}>
                   About
                 </Link>
-                <Link className="navbar-item" to="/#work">
+                <Link className="navbar-item" to="/#work" onClick={() => this.toggleHamburger()}>
                   Experience
                 </Link>
-                <Link className="navbar-item" to="/projects">
+                <Link className="navbar-item" to="/projects" onClick={() => this.toggleHamburger()}>
                   Projects
                 </Link>
                 {/*<Link className="navbar-item" to="/blog">

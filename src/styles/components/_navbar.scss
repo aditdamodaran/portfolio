@@ -63,6 +63,10 @@
   margin: 0rem 1rem;
 }
 
+.navbar-item:hover {
+  background-color: darken($tertiary-text, 10%);
+}
+
 
 @include mobile {
 
