@@ -17,7 +17,7 @@ export const ProjectPageTemplate = ({
   contentComponent
 }) => {
   const PageContent = contentComponent || Content
-  console.log(imageLarge)
+  // console.log(imageLarge)
   return (
     <div>
       <section id="projectpage">

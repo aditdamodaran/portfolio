@@ -1,7 +1,7 @@
 ---
 templateKey: 'project-page'
 path: /projects/ftcfraud
-title: FTC Fradulent Marketing Analysis
+title: FTC Fraudulent Marketing Analysis
 image: /img/ftcfraud.jpg
 imageLarge: false
 heading:  
@@ -9,7 +9,7 @@ heading:
 
 *Please note: I worked on this project during a two month period as a Research Assistant for Empirical Marketing Professor Anita Rao at the University of Chicago Booth School of Business, but unfortunately due to time constraints with my class schedule, part-time internship, and extracurricular commitments I was unable to finish the project.*
 
-[Here is a link to the GitHub repo](https://github.com/aditdamodaran/FTC-Fradulent-Marketing-Analysis-of-User-Pathways) containing the code I used to parse user web-browsing data.
+[Here is a link to the GitHub repo](https://github.com/aditdamodaran/FTC-Fraudulent-Marketing-Analysis-of-User-Pathways) containing the code I used to parse user web-browsing data.
 
 <div class="quote">Firms sometimes make selective or deceptive claims. Such claims can have negative consequences for consumers, especially if consumers are not fully informed and the claims are hard to verify. This paper aims to measure the decline in demand that a firm making such claims faces when caught.
 <br><br> &mdash; Rao, Wang |  <i>Demand for ‘Healthy’ Products: False Claims and FTC Regulation</i></div>

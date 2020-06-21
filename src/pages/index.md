@@ -2,7 +2,7 @@
 templateKey: index-page
 title:  Adit Damodaran is a builder at ♥
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
+heading: Heya! I'm Adit. I'm a software engineer, web designer, photographer, writer, and avid roadtripper. As of June 2020, I'm looking for full-time positions.
 subheading: I’ve held titles ranging from software engineer, to economist, to designer.
 aboutme:
   title: Heya! I’m Adit.
@@ -24,7 +24,7 @@ work:
   projects:
     - image: /img/ipos.jpg
       title: >
-        Intel-Point-of-Sale (2019)
+        Intel, Intelligent-Point-of-Sale (2019)
       text: >
         During the summer of 2019, I had the privilege of working with the amazing Technology team at Digitas in Chicago as a Front-End Software Engineering Intern. During my time at Digitas, I worked on Intel’s “Intelligent Point of Sale (IPOS)” software. IPOS enables retail shoppers to learn about and explore the capabilities of Intel devices without the pressure of a salesperson. The software, which is installed on thousands of devices in computer showrooms around the world, automatically detects the system specifications of the device and displays this information in an easy-to-understand, interactive experience that educates the shopper. Additionally, a cloud-based admin panel allows retailers to control and modify hundreds of devices at a time, enabling them to customize prices, promotions, and branding.
       tech: ['Vue', 'Nuxt', 'Git', 'JavaScript', 'HTML/SCSS', 'NVM/NPM']
@@ -84,11 +84,11 @@ older:
       pageLink: 'statepartisanship'
     - image: /img/ftcfraud.jpg
       title: >
-        FTC Fradulent Marketing Analysis
+        FTC Fraudulent Marketing Analysis
       text: >
         [No Text]
       tech: ['Python', 'Pandas','Numpy']
-      github: '/FTC-Fradulent-Marketing-Analysis-of-User-Pathways'
+      github: '/FTC-Fraudulent-Marketing-Analysis-of-User-Pathways'
       pageLink: 'ftcfraud'
     - image: /img/uptodate.jpg
       title: >

@@ -7,6 +7,8 @@ imageLarge: true
 heading:  
 ---
 
+**NOTE: The Subli Landing Page is not yet LIVE**
+
  Subli, the 2020 UChicago College New Venture Challenge winner, is a student-run startup that made a free peer-to-peer marketplace to find and list student housing. I worked with Subli to design and develop a landing page that would emphasize their brand's simplicity and honesty while increasing conversions.
 
 <div class="image-100"></div>

@@ -1,7 +1,7 @@
 ---
 templateKey: 'project-page'
 path: /projects/ipos
-title: Intel-Point-of-Sale
+title: Intel, Intelligent-Point-of-Sale (IPOS)
 image: /img/ipos.jpg
 imageLarge: false
 heading:  
