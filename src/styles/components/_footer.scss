@@ -22,7 +22,7 @@ footer .logo {
   justify-content: center;
   text-align: center;
   color: white;
-  font-family: "AvenirNext-Bold";
+  font-family: "AvenirNext-Bold", Arial;
   flex-wrap: wrap;
   line-height: 2rem;
   font-size: calculateRem(14px);
@@ -31,7 +31,7 @@ footer .logo {
 .footer-content-container a {
   padding: 1rem 0rem;
   color: white;
-  font-family: "AvenirNext-Bold";
+  font-family: "AvenirNext-Bold", Arial;
 }
 
 @include mobile {

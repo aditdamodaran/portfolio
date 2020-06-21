@@ -9,7 +9,3 @@ $folderAvenir: './avenir_next';
 @include font-face('AvenirNext-Regular', 'AvenirNext-Regular', $folderAvenir, normal, 300);
 @include font-face('AvenirNext-Medium', 'AvenirNext-Medium', $folderAvenir, normal, 500);
 @include font-face('AvenirNext-Bold', 'AvenirNext-Bold', $folderAvenir, bold, 700);
-
-// CUTIVE
-$folderCutive: './cutive_mono';
-@include font-face('Cutive-Mono','CutiveMono-Regular', $folderCutive, normal, 300)

@@ -17,17 +17,17 @@
 
 .project-title {
   color: $secondary-text;
-  font-family: 'Avenir-Light';
+  font-family: 'Avenir-Light', Arial;
   font-size: calculateRem(30px);
 }
 
 .project-links {
   margin: 1rem auto;
-  font-family: 'Avenir-Light';
+  font-family: 'Avenir-Light', Arial;
 } 
 
 .project-links > div {
-  font-family: "Avenir-Light";
+  font-family: "Avenir-Light", Arial;
   display: inline;
   margin-right: 1rem;
 }
@@ -36,7 +36,7 @@
   line-height: 1.5rem;
   margin: 1rem auto;
   color: $secondary-text;
-  font-family: 'Avenir-Light';
+  font-family: 'Avenir-Light', Arial;
   font-size: calculateRem(16px);
 }
 

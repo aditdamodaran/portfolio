@@ -3,7 +3,7 @@ section#projectpage{
   width: 70%;
 
   h1, .content > h1 {
-    font-family: 'AvenirNext-Bold';
+    font-family: 'AvenirNext-Bold', Arial;
     font-size: calculateRem(40px);
     color: $secondary-text;
   }
@@ -11,13 +11,13 @@ section#projectpage{
   .content > ul,
   .content > ol,
   .content p {
-    font-family: 'AvenirNext-Regular';
+    font-family: 'AvenirNext-Regular', Arial;
     font-size: calculateRem(24px);
     line-height: 2.25rem;
   }
 
   .content > h1 {
-    font-family: 'AvenirNext-Bold';
+    font-family: 'AvenirNext-Bold', Arial;
     font-size: calculateRem(40px);
     color: indianred;
   }
@@ -25,7 +25,7 @@ section#projectpage{
   .content a {
     color: $blue-link;
     cursor: pointer;
-    font-family: 'AvenirNext-Regular';
+    font-family: 'AvenirNext-Regular', Arial;
     font-weight: bold;
   }
   .content a:hover {
@@ -38,7 +38,7 @@ section#projectpage{
     display: flex;
     margin: 0 auto;
     font-size: calculateRem(20px);
-    font-family: 'AvenirNext-Regular';
+    font-family: 'AvenirNext-Regular', Arial;
     text-align: center;
   }
 
@@ -86,7 +86,7 @@ section#projectpage{
 div.quote {
   padding: 2rem;
   background-color: darken($primary-background,15%);
-  font-family: 'AvenirNext-Regular';
+  font-family: 'AvenirNext-Regular', Arial;
   font-size: calculateRem(22px);
   line-height: 2rem;
 }

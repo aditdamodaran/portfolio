@@ -29,11 +29,11 @@ section.main-landing{
 }
 
 .landing-page-primary-copy {
-  font-family: 'AvenirNext-Regular';
+  font-family: 'AvenirNext-Regular', Arial;
   font-weight: 100;
   color: $secondary-text;
   span {
-    font-family: 'AvenirNext-Bold';
+    font-family: 'AvenirNext-Bold', Arial;
     font-size: calculateRem(48px);
     font-weight: 900;
   }
@@ -46,7 +46,7 @@ section.main-landing{
 }
 
 .landing-page-subheading-copy {
-  font-family: 'AvenirNext-Regular';
+  font-family: 'AvenirNext-Regular', Arial;
   font-weight: 100;
   color: $tertiary-text;
   display: inline-block;
@@ -154,14 +154,14 @@ section#aboutme{
 
 .about-me-title {
   color: $secondary-text;
-  font-family: 'AvenirNext-Regular';
+  font-family: 'AvenirNext-Regular', Arial;
   font-size: calculateRem(36px);
 }
 
 .about-me-description,
 .recent-technologies {
   color: $secondary-text;
-  font-family: 'Avenir-Light';
+  font-family: 'Avenir-Light', Arial;
   font-size: calculateRem(18px);
   font-weight: 100;
 }
@@ -207,7 +207,7 @@ section#work{
 
 .work-experience-title {
   color: $secondary-text;
-  font-family: 'AvenirNext-Regular';
+  font-family: 'AvenirNext-Regular', Arial;
   font-size: calculateRem(36px);
 }
 
@@ -230,7 +230,7 @@ section#projects{
 .blog-title,
 .projects-title {
   color: white;
-  font-family: 'AvenirNext-Regular';
+  font-family: 'AvenirNext-Regular', Arial;
   font-size: calculateRem(36px);
 }
 
