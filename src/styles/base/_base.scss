@@ -57,6 +57,10 @@ body {
   margin: 0;
 }
 
+.on-mobile {
+  display: none;
+}
+
 .third {
   flex-basis: 40%;
   display: flex;
@@ -84,5 +88,8 @@ body {
   .left-half,
   .right-half {
     flex-basis: 100%;
+  }
+  .on-mobile {
+    display: block;
   }
 }

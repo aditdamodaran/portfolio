@@ -22,7 +22,7 @@ export default class BlogIndexPage extends React.Component {
               padding: '1rem',
             }}
           >
-            Latest Stories
+            You found your way here without the Navigation, nice! I don't have any posts or styles yet.
           </h1>
         </div>
         <section className="section">

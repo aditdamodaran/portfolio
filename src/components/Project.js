@@ -13,6 +13,13 @@ class Project extends React.Component {
           {this.props.title}
         </h3>
         <div className="project-links project-spacing">
+          <div className="project-page-link">
+            <Link 
+              to={`/projects/${this.props.pageLink}`}
+            >
+              Project Page
+            </Link>
+          </div>
           {this.props.link ?
             <div className="project-website">
               <a href={`https://www.${this.props.link}`}>

@@ -1,0 +1,42 @@
+footer {
+  width: 100%;
+  background-color: $secondary-background;
+}
+
+footer .logo {
+  filter: brightness(0) invert(1);
+  flex-basis: 10%;
+  padding: 2rem 0rem;
+  width: 5rem;
+}
+
+.footer-content-text {
+  flex-basis: 100%;
+}
+
+.footer-content-container {
+  padding: 2rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: "AvenirNext-Bold";
+  flex-wrap: wrap;
+  line-height: 2rem;
+}
+
+.footer-content-container a {
+  padding: 1rem 0rem;
+  color: white;
+  font-family: "AvenirNext-Bold";
+}
+
+@include mobile {
+  footer .logo {
+    filter: brightness(0) invert(1);
+    flex-basis: 10%;
+    padding: 2rem 0rem;
+    width: 7.5rem;
+  }
+}

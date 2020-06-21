@@ -9,6 +9,7 @@ section#projectpage{
   }
 
   .content > ul,
+  .content > ol,
   .content p {
     font-family: 'AvenirNext-Regular';
     font-size: calculateRem(24px);
@@ -61,8 +62,17 @@ section#projectpage{
     width: 100% !important;
   }
 
-}
+  .image-third + p > img {
+    width: 33%;
+  }
 
+  .image-third,
+  .image-third + p,
+  .image-third + p > img {
+    display: inline;
+  }
+
+}
 
 .projectpage-image {
   width: 100%;
@@ -92,6 +102,7 @@ div.quote {
     }
 
     .content > ul,
+    .content > ol,
     .content p {
       font-size: calculateRem(20px);
       line-height: 2rem;
@@ -113,6 +124,10 @@ div.quote {
     .image-50,
     .image-50 + p > img{
       width: 100% !important;
+    }
+
+    .image-third + p > img {
+      width: 100%;
     }
 
   }

@@ -35,7 +35,7 @@ export const IndexPageTemplate = ({
         <h1
           className="landing-page-primary-copy"
         >
-          <span className="name">Adit Damodaran</span> is a builder at <span className="heart">♥</span>
+          <span className="name">Adit Damodaran</span> is a builder at <span className="heart">🤍</span>
         </h1>
         <div className="flex-break"></div>
         <h3
@@ -211,7 +211,7 @@ export const IndexPageTemplate = ({
 
     </section>
     
-    <section id="blog">
+    {/*<section id="blog">
       <div className="blog-title-container">
       <h1 className="blog-title">
         Blog
@@ -220,7 +220,7 @@ export const IndexPageTemplate = ({
       <div className="blog-post-tiles">
         <BlogRoll index={index}/>     
       </div>
-    </section>
+            </section>*/}
 
 
 

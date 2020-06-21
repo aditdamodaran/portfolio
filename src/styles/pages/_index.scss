@@ -38,6 +38,7 @@ section.main-landing{
     font-weight: 900;
   }
   span.heart {
+    filter: brightness(0.3);
     transform: scale(1, 0.9);
     display: inline-block;
     font-size: calculateRem(40px);
@@ -254,7 +255,7 @@ section#blog {
   }
   
   .landing-page-copy-container {
-    padding: 0rem 0rem;
+    padding: 0rem 2rem;
     span.name {
       display: block;
       width: 100%;

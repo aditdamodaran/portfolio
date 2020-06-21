@@ -55,7 +55,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar index={index ? true : false}/>
       <div className="main-content">{children}</div>
-      {/*<Footer />*/}
+      <Footer />
     </div>
   )
 }

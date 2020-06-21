@@ -23,6 +23,7 @@
 
 .project-links {
   margin: 1rem auto;
+  font-family: 'Avenir-Light';
 } 
 
 .project-links > div {
@@ -82,9 +83,11 @@
     padding: 0;
     width: calc(100% - 2rem);
     height: 55vw;
+    border-radius: 0.5rem;
   }
 
   .work-related {
     height: 25vw;
   }
+  
 }
