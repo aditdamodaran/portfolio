@@ -35,7 +35,7 @@ export const IndexPageTemplate = ({
         <h1
           className="landing-page-primary-copy"
         >
-          <span className="name">Adit Damodaran</span> is a builder at <span className="heart">🤍</span>
+          <span className="name">Adit Damodaran</span> is a builder at <span className="heart">❤</span>
         </h1>
         <div className="flex-break"></div>
         <h3
