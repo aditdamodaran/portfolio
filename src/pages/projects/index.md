@@ -28,7 +28,7 @@ work:
         Intel, Intelligent-Point-of-Sale (2019)
       text: >
         During the summer of 2019, I had the privilege of working with the amazing Technology team at Digitas in Chicago as a Front-End Software Engineering Intern. During my time at Digitas, I worked on Intel’s “Intelligent Point of Sale (IPOS)” software. IPOS enables retail shoppers to learn about and explore the capabilities of Intel devices without the pressure of a salesperson. The software, which is installed on thousands of devices in computer showrooms around the world, automatically detects the system specifications of the device and displays this information in an easy-to-understand, interactive experience that educates the shopper. Additionally, a cloud-based admin panel allows retailers to control and modify hundreds of devices at a time, enabling them to customize prices, promotions, and branding.
-      tech: ['Vue', 'Nuxt', 'Git', 'JavaScript', 'HTML/SCSS', 'NVM/NPM']
+      tech: ['Vue', 'Nuxt', 'Git', 'JavaScript', 'JIRA/Jenkins', 'HTML/SCSS', 'Bootstrap', 'NVM/NPM']
       pageLink: 'ipos'
     - image: /img/cvsalesnavblue.jpg
       title: >
@@ -53,7 +53,7 @@ intro:
         Midway Ventures (2018)
       text: >
         Midway Ventures was founded in 2014 as a student organization at the University of Chicago to help VC firms identify, diligence, and source promising student startups, and to work directly with startups on projects related to fundraising and business development.
-      tech: ['JavaScript', 'Squarespace Dev Platform', 'jQuery', 'Greensock', 'HTML', 'LESS',]
+      tech: ['JavaScript', 'Bootstrap', 'Squarespace Dev Platform', 'jQuery', 'Greensock', 'HTML', 'LESS',]
       link: 'midwayvc.com'
       pageLink: 'midwayvc'
     - image: /img/sublilandingbg.jpg
