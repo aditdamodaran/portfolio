@@ -3,9 +3,7 @@ import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
 
 class Project extends React.Component {
-  constructor(props){
-    super(props)
-  }
+
   render() {
     return (
       <div className="project-container">

@@ -14,12 +14,7 @@ aboutme:
     During my brief time at Hopper, I developed a report on how Covid-19 would affect U.S. & Canadian flight operations and airfare, and created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers.
   description4: >
     Prior to that, I worked as a software engineering intern at Digitas for the Intel account. I was also an undergraduate VC Intern with Chicago Ventures, and a Marketing/Design Intern alongside the amazing team at the Polsky Center for Entrepreneurship and Innovation.
-  image: /img/me.jpg
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  image: /img/me.webp
 work:
   projects:
     - image: /img/ipos.jpg
@@ -62,23 +57,13 @@ intro:
         Subli, the 2020 UChicago College New Venture Challenge winner, is a student-run startup that made a free peer-to-peer marketplace to find and list student housing. I worked with Subli to design and develop a landing page that would emphasize their brand's simplicity and honesty while increasing conversions.
       tech: ['JavaScript', 'LESS', 'HTML']
       pageLink: 'subli'
-    - image: /img/meeting-space.png
-      title: >
-        TBD
-      pageLink: '/'
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
 older:
   projects:
     - image: /img/statepartisanship.jpg
       title: >
         Visualizing U.S. State Legislature Partisanship
       text: >
-        [No Text]
+        How do you effectively convey complex panel time-series data in a static image?
       tech: ['R','Python']
       github: ''
       pageLink: 'statepartisanship'
@@ -86,7 +71,7 @@ older:
       title: >
         FTC Fraudulent Marketing Analysis
       text: >
-        [No Text]
+        Research aimed at understanding how effective the FTC sting operation was at protecting consumers against fraudlent marketing companies.
       tech: ['Python', 'Pandas','Numpy']
       github: '/FTC-Fraudulent-Marketing-Analysis-of-User-Pathways'
       pageLink: 'ftcfraud'
@@ -94,24 +79,8 @@ older:
       title: >
         Scraping Drug Information from UpToDate.com
       text: >
-        [No Text]
+        Coding a web-scraper to automate acquiring detailed drug information from an online, authentication-protected database.
       tech: ['Python', 'Selenium','lxml']
       github: 'uptodate'
       pageLink: 'uptodate'
-main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
 ---

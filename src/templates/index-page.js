@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import github from '../img/github-icon.svg'
 // import codepen from '../img/codepen-icon.svg'
 import linkedin from '../img/linkedin-icon.svg'
@@ -14,12 +14,8 @@ import Project from '../components/Project'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
   subheading,
   aboutme,
-  description,
   work,
   intro,
   older,
@@ -187,6 +183,7 @@ export const IndexPageTemplate = ({
         <Project
           title={older.projects[0].title}
           image={older.projects[0].image}
+          text={older.projects[0].text}
           tech={older.projects[0].tech}
           github={older.projects[0].github}
           pageLink={older.projects[0].pageLink}
@@ -195,6 +192,7 @@ export const IndexPageTemplate = ({
         <Project
           title={older.projects[1].title}
           image={older.projects[1].image}
+          text={older.projects[1].text}
           tech={older.projects[1].tech}
           github={older.projects[1].github}
           pageLink={older.projects[1].pageLink}
@@ -203,6 +201,7 @@ export const IndexPageTemplate = ({
         <Project
           title={older.projects[2].title}
           image={older.projects[2].image}
+          text={older.projects[2].text}
           tech={older.projects[2].tech}
           github={older.projects[2].github}
           pageLink={older.projects[2].pageLink}
@@ -232,12 +231,7 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
   aboutme: PropTypes.object,
-  description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -251,10 +245,8 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         aboutme={frontmatter.aboutme}
-        description={frontmatter.description}
         work={frontmatter.work}
         intro={frontmatter.intro}
         older={frontmatter.older}
@@ -302,7 +294,6 @@ export const pageQuery = graphql`
             }
           } 
         }
-        description
         work {
           projects {
             image {
@@ -334,8 +325,6 @@ export const pageQuery = graphql`
             github
             pageLink
           }
-          heading
-          description
         }
         older {
           projects {

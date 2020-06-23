@@ -42,29 +42,38 @@
 }
 
 .work-content {
-  width: 60%;
+  width: 80%;
   color: $secondary-text;
 }
 
 
 .work-content-title {
-  font-size: calculatRem(30px);
+  font-family: "AvenirNext-Bold", Arial;
   width: 100%;
+  font-size: calculateRem(24px);
 }
 .work-content-date {
   font-family: 'Courier New';
-  font-size: calculateRem(14px);
+  font-size: calculateRem(16px);
+  font-weight: bold;
+}
+
+.work-content-description {
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
 }
 
 .work-content-bullet {
   margin-top: 1rem;
+  font-size: calculateRem(20px);
 }
 .work-content-tech {
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 100%;
 }
 .technologies {
   display: inline-block;
+  margin-top: 1rem;
 }
 .technologies p {
   font-family: 'Courier New';
@@ -92,6 +101,22 @@
   .technologies p {
     background-color: transparent;
     padding: 0;
+  }
+
+  .technologies {
+    margin-top: 0rem;
+  }
+
+  .work-content-container {
+    margin-top: 1rem;
+  }
+
+  .work-content-tech {
+    margin-top: 1.5rem;
+  }
+
+  .work-content-bullet {
+    font-size: calculateRem(18px);
   }
 }
 
@@ -137,9 +162,4 @@
       border-bottom: 3px solid #ccc;
     }
   }
-
-  .work-content-tech {
-  }
-  
-  
 }

@@ -8,7 +8,7 @@ const workExperience = [
     role: 'Economist',
     active: true,
     bullets: [
-      `Analyzed Covid-19\'s impact on U.S./Canadian flight operations and airfare, and compiled a report with my findings`,
+      `Analyzed Covid-19's impact on U.S./Canadian flight operations and airfare, and compiled a report with my findings`,
       `Created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers`
     ],
     technologies: ['Python (Pandas/Plotly)', 'Google Cloud Platform', 'SQL', ]
@@ -23,7 +23,7 @@ const workExperience = [
       'Developed front-end in Vue.JS/Nuxt, built subtitle functionality for videos, and added animations to Intel’s Point-of-Sale (IPOS) software, which ships internationally in +20 languages retail PCs with Intel processors',
       'Collaborated with the engineering and QA teams to reduce technical debt, track progress in Jira, and document changes in Storybook — code reviewed by the agency’s national front-end lead and merged into production'
     ],
-    technologies: ['Vue', 'Nuxt', 'Git', 'JavaScript', 'HTML/SCSS', 'NVM/NPM']
+    technologies: ['Vue', 'Nuxt', 'Git', 'JavaScript', 'JIRA/Jenkins', 'HTML/SCSS', 'Bootstrap', 'NVM/NPM']
   },
   {
     company: 'Chicago Ventures',
@@ -99,9 +99,14 @@ class Work extends React.Component {
           ): null}
           </div>
           <div className="work-content-container">
-              <h3 className="work-content work-content-title">{workExperience ? `${workExperience[this.state.activeTabIndex].role} @ ${workExperience[this.state.activeTabIndex].company}` : null}</h3>
+              <div 
+                className="work-content work-content-title">
+                {workExperience ? 
+                  `${workExperience[this.state.activeTabIndex].role} @ ${workExperience[this.state.activeTabIndex].company}` 
+                : null}
+              </div>
               <p className="work-content work-content-date">{workExperience ? workExperience[this.state.activeTabIndex].timeframe : null}</p>
-              <ul className="work-content">{workExperience[this.state.activeTabIndex].bullets ? workExperience[this.state.activeTabIndex].bullets.map((bullet,idx) => (
+              <ul className="work-content work-content-description">{workExperience[this.state.activeTabIndex].bullets ? workExperience[this.state.activeTabIndex].bullets.map((bullet,idx) => (
                 <li key={idx} className="work-content-bullet">{bullet}</li>
               )) : null}</ul>
               <div className="work-content work-content-tech">{workExperience ? workExperience[this.state.activeTabIndex].technologies.map((tech, idx) => (
