@@ -14,7 +14,7 @@ aboutme:
     During my brief time at Hopper, I developed a report on how Covid-19 would affect U.S. & Canadian flight operations and airfare, and created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers.
   description4: >
     Prior to that, I worked as a software engineering intern at Digitas for the Intel account. I was also an undergraduate VC Intern with Chicago Ventures, and a Marketing/Design Intern alongside the amazing team at the Polsky Center for Entrepreneurship and Innovation.
-  image: /img/me.webp
+  image: /img/me.jpg
 work:
   projects:
     - image: /img/ipos.jpg
