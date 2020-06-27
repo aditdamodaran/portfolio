@@ -1,0 +1,28 @@
+.four-oh-four {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  h1, p {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    font-family: "AvenirNext-Regular", Arial;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: "AvenirNext-Bold", Arial;
+    font-weight: bold;
+    color: $secondary-text;
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .link {
+    font-size: calculateRem(20px);
+  }
+}
