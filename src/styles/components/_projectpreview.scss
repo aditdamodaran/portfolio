@@ -1,11 +1,16 @@
 section#project-previews {
   background-color: $primary-background;
   
+  .project-previews-container{
+    width: 95%;
+    margin: 0rem auto;
+  }
+  
   .project-preview-title-container {
-    width: 92.5%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem 0rem;
+    padding: 1rem 0rem;
     padding-bottom: 1rem;
   }
 
@@ -15,7 +20,7 @@ section#project-previews {
     font-size: calculateRem(36px);
     padding-bottom: 1rem;
     border-bottom: 1px solid $secondary-text;
-    width: 95%;
+    width: 90%;
   }
 
   .project-preview-container {    
@@ -33,6 +38,7 @@ section#project-previews {
     display: grid;
     place-items: center;
   }
+
   .project-tile {
     height: 25vw;
     width: 90%;
@@ -40,9 +46,11 @@ section#project-previews {
     margin: 0rem auto;
     padding: 0rem 0rem;
   }
+
   .work-related {
     height: 11.75vw;
   }
+
   .project-info {
     flex-wrap: wrap;
   }
@@ -50,6 +58,8 @@ section#project-previews {
 
 @include large {
   section#project-previews {
+    width: 100%;
+
     .project-preview-container {
       display: block;
       margin: 2rem auto;
@@ -60,11 +70,17 @@ section#project-previews {
       margin-top: 0rem;
     }
 
+    .projects-title {
+      width: 90%;
+      margin: 0 auto;
+    }
+
     .project-tile {
       height: 45vw;
       margin-bottom: 2rem;
-      width: 80%;
+      width: 85%;
     }
+
     .work-related {
       height: 25vw;
     }
@@ -75,6 +91,16 @@ section#project-previews {
   section#project-previews {
     .project-tile {
       margin-bottom: 2rem;
+      width: 90%;
+    }
+
+    .projects-title {
+      width: 90vw;
+      margin: 0 auto;
+    }
+
+    .project-spacing {
+      width: 90%;
     }
   }
 }
