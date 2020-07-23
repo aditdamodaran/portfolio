@@ -37,7 +37,7 @@ intro:
       title: >
         Andre Castro Racing (2020)
       text: >
-        Andre Castro is a first-generation Colombian-American racecar driver. I met Andre back in 2018, when he was looking for sponsorships to continue on the Mazda Road to Indy USF2000 Series. Last year he proved to be a front-runner in the 2019 NASCAR Whelen Euro Series with PK Carsport, and this year amid the 2020 Coronavirus Pandemic he has continued to excel in EuroNascar's E-Series with DF1 Racing. I built Andre's website to help sponsors and racing teams better understand his potential and talent.
+        Andre Castro is a first-generation Colombian-American racecar driver and 2020 EuroNASCAR Champion. I met Andre back in 2018, when he was looking for sponsorships to continue on the Mazda Road to Indy USF2000 Series. Last year he proved to be a front-runner in the 2019 NASCAR Whelen Euro Series with PK Carsport, and this year amid the 2020 Coronavirus Pandemic won the EuroNascar E-Series Championship with DF1 Racing. I built Andre's website to help sponsors and racing teams better understand his potential and talent.
       tech: ['React', 'Gatsby v2', 'Netlify (CMS)', 'SASS', 'Bulma (CSS)', 'Javascript']
       link: 'andrecastroracing.com'
       github: 'andrecastroracing'
