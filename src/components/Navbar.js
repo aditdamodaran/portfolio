@@ -169,9 +169,13 @@ const Navbar = class extends React.Component {
               className={`navbar-menu ${this.state.navBarActiveClass}`}
             >
               <div className="navbar-start">
-                <Link className="navbar-item" to="/about" onClick={() => this.toggleHamburger()}>
-                  About
-                </Link>
+                {this.props.about ?
+                  null
+                :
+                  <Link className="navbar-item" to="/#aboutme" onClick={() => this.toggleHamburger()}>
+                    About
+                  </Link>
+                }
                 <Link className="navbar-item" to="/#work" onClick={() => this.toggleHamburger()}>
                   Experience
                 </Link>

@@ -7,10 +7,11 @@ import '../styles/styles.scss'
 import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children }) => {
-  let index, blog = undefined
+  let index, blog, about = undefined
   if (children.props){
     index = children.props.index
     blog = children.props.blog
+    about = children.props.about
   }
   const { title, description } = useSiteMetadata()
   return (
@@ -53,7 +54,10 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar index={index ? true : false}/>
+      <Navbar 
+        index={index ? true : false}
+        about={about ? true : false}
+      />
       <div className="main-content">{children}</div>
       <Footer />
     </div>

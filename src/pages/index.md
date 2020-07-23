@@ -9,7 +9,7 @@ aboutme:
   description1: >
     I’m a software engineer, web designer, photographer, writer, and avid roadtripper. I most recently worked as an Economist at Hopper, but am looking for my next opportunity a bit early due to Covid-19.  
   description2: >
-    I graduated from the University of Chicago in Dec. 2019 with a B.A. in Economics and a specialization in Data Science. In Aug. 2020, I’ll begin my Online Master’s in Computer Science at the Georgia Institute of Technology.
+    I graduated from the University of Chicago in Dec. 2019 with a B.A. in Economics and a specialization in Data Science. In Aug. 2020, I’ll begin my Master’s in Computer Science at the Georgia Institute of Technology.
   description3: >
     During my brief time at Hopper, I developed a report on how Covid-19 would affect U.S. & Canadian flight operations and airfare, and created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers.
   description4: >
@@ -21,14 +21,14 @@ work:
       title: >
         Intel, Intelligent-Point-of-Sale (2019)
       text: >
-        During the summer of 2019, I had the privilege of working with the amazing Technology team at Digitas in Chicago as a Front-End Software Engineering Intern. During my time at Digitas, I worked on Intel’s “Intelligent Point of Sale (IPOS)” software. IPOS enables retail shoppers to learn about and explore the capabilities of Intel devices without the pressure of a salesperson. The software, which is installed on thousands of devices in computer showrooms around the world, automatically detects the system specifications of the device and displays this information in an easy-to-understand, interactive experience that educates the shopper. Additionally, a cloud-based admin panel allows retailers to control and modify hundreds of devices at a time, enabling them to customize prices, promotions, and branding.
+        During the summer of 2019, I had the privilege of working with the amazing Technology team at Digitas in Chicago as a Front-End Software Engineering Intern. During my time at Digitas, I worked on Intel’s “Intelligent Point of Sale (IPOS)” software.
       tech: ['Vue', 'Nuxt', 'Git', 'JavaScript', 'JIRA/Jenkins', 'HTML/SCSS', 'Bootstrap', 'NVM/NPM']
       pageLink: 'ipos'
-    - image: /img/cvsalesnavblue.jpg
+    - image: /img/cvsalesnav.jpg
       title: >
         Chicago Ventures Sales Navigator Scraper (2019)
       text: >
-        LinkedIn describes Sales Navigator as “a leading social selling tool that enables sales professionals to build and nurture customer relationships and attain increased sales performance.” Sales Navigator is a paid-subscription service. I built, shipped, and maintained software to scrape ~100 results/minute for any given filter on Sales Navigator, helping Chicago Ventures automate a previously manual and tedious process.
+       I built, shipped, and maintained software to scrape ~100 results/minute for any given filter on Sales Navigator, helping Chicago Ventures automate a previously manual and tedious process.
       tech: ['Python (lxml + Pandas)', 'Selenium', 'Kivy']
       pageLink: 'salesnav'
 intro:
@@ -37,7 +37,7 @@ intro:
       title: >
         Andre Castro Racing (2020)
       text: >
-        Andre Castro is a first-generation Colombian-American racecar driver and 2020 EuroNASCAR Champion. I met Andre back in 2018, when he was looking for sponsorships to continue on the Mazda Road to Indy USF2000 Series. Last year he proved to be a front-runner in the 2019 NASCAR Whelen Euro Series with PK Carsport, and this year amid the 2020 Coronavirus Pandemic won the EuroNascar E-Series Championship with DF1 Racing. I built Andre's website to help sponsors and racing teams better understand his potential and talent.
+        Andre Castro is a first-generation Colombian-American racecar driver and 2020 EuroNASCAR Champion. I built Andre's website to help sponsors and racing teams better understand his potential and talent.
       tech: ['React', 'Gatsby v2', 'Netlify (CMS)', 'SASS', 'Bulma (CSS)', 'Javascript']
       link: 'andrecastroracing.com'
       github: 'andrecastroracing'
@@ -71,7 +71,7 @@ older:
       title: >
         FTC Fraudulent Marketing Analysis
       text: >
-        Research aimed at understanding how effective the FTC sting operation was at protecting consumers against fraudlent marketing companies.
+        Research aimed at understanding how effective an FTC sting operation was at protecting consumers against fraudulent marketing companies.
       tech: ['Python', 'Pandas','Numpy']
       github: '/FTC-Fraudulent-Marketing-Analysis-of-User-Pathways'
       pageLink: 'ftcfraud'

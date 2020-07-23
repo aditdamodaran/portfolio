@@ -1,5 +1,5 @@
 ---
-templateKey: 'product-page'
+templateKey: 'projects-page'
 path: /projects
 title: Projects
 image: /img/jumbotron.jpg
@@ -7,7 +7,7 @@ heading: heading
 subheading: I’ve held titles ranging from software engineer, to economist, to designer.
 work:
   projects:
-    - image: /img/ipos.jpg
+    - image: /img/iposbanner.jpg
       title: >
         Intel, Intelligent-Point-of-Sale (2019)
       text: >
