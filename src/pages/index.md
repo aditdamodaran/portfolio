@@ -3,7 +3,7 @@ templateKey: index-page
 title:  Adit Damodaran is a builder at ♥
 image: /img/home-jumbotron.jpg
 heading: Heya! I'm Adit. I'm a software engineer, web designer, photographer, writer, and avid roadtripper. As of June 2020, I'm looking for full-time positions.
-subheading: I’ve held titles ranging from software engineer, to economist, to designer.
+subheading: I'm a front-end engineer passionate about creating for the web.
 aboutme:
   title: Heya! I’m Adit.
   description1: >

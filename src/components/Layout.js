@@ -15,7 +15,7 @@ const TemplateWrapper = ({ children }) => {
   }
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <div className="layout-wrapper">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>

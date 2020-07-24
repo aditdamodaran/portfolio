@@ -63,6 +63,35 @@ section.main-landing{
 // .social-icons-sidebar > * {
 // }
 
+.scroll-indicator {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: scale(1, 0.75);
+  animation: blinkingScroll 2s infinite;
+}
+
+.arrow-2 {
+  bottom: 1rem;
+  opacity: 0.5;
+  animation: blinkingScroll2 2s infinite;
+}
+
+@keyframes blinkingScroll2 {
+  0% { opacity: 0;}
+  10% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes blinkingScroll {
+  0% { opacity: 0;}
+  70% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+
 .social-icons-sidebar {
   position: fixed;
   display: flex;
@@ -75,6 +104,15 @@ section.main-landing{
   mix-blend-mode: difference;
   // width: 2rem;
 
+  .line {
+    border-left: 1px solid white;
+    width: 1px;
+    height: 35vh;
+    position: fixed;
+    right: 2rem;
+    bottom: 1rem;
+  }
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -83,6 +121,7 @@ section.main-landing{
     width: 1.75rem;
     padding: 0;
   }
+
   li {
     opacity: 0.75;
     transition: opacity 0.2s ease;
@@ -95,6 +134,7 @@ section.main-landing{
       filter: brightness(0) invert(1);
     }
   }
+
   li:hover {
     opacity: .25;
   }
@@ -244,6 +284,11 @@ section#blog {
   color: white;
 }
 
+@include tablet {
+  .scroll-indicator {
+    display: none;
+  }
+}
 
 
 @include mobile {

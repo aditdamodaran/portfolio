@@ -5,6 +5,7 @@ import github from '../img/github-icon.svg'
 import linkedin from '../img/linkedin-icon.svg'
 import heart from '../img/heart.svg'
 import twitter from '../img/twitter-icon.svg'
+import downarrow from '../img/downarrow.svg'
 import Layout from '../components/Layout'
 import Work from '../components/Work'
 import ProjectPreview from '../components/ProjectPreview'
@@ -39,11 +40,16 @@ export const IndexPageTemplate = ({
         </h3>
       </div>
 
+      <img className="scroll-indicator arrow-1" src={downarrow} />
+      <img className="scroll-indicator arrow-2" src={downarrow} />
+
       {/* MAIN LANDING PAGE SOCIAL ICONS (DESKTOP) */}
 
       <div 
         className="social-icons-sidebar"
       >
+        <div className="line"></div>
+
         <ul>
           <li>
             <a href="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="LinkedIn">
