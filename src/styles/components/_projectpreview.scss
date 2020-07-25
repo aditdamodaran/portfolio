@@ -1,4 +1,4 @@
-section#project-previews {
+section#projects {
   background-color: $primary-background;
   
   .project-previews-container{
@@ -57,7 +57,7 @@ section#project-previews {
 }
 
 @include large {
-  section#project-previews {
+  section#projects {
     width: 100%;
 
     .project-preview-container {

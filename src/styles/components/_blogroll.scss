@@ -67,7 +67,21 @@
     border-bottom: none;
   }
 
+  .title-container {
+    flex-wrap: wrap;
+  }
+
   .date p {
     margin-bottom: 0.25rem;
   }
+
+  .blog-roll {
+    .tag:first-child {
+      margin-left: 0;
+    }
+    .tags {
+      margin-top: .5rem;
+    }
+  }
+  
 }

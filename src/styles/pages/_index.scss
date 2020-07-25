@@ -314,7 +314,21 @@ section#blog {
   }
 
   .social-icons-sidebar {
-    display: none;
+    position: absolute;
+    top: unset;
+    bottom: 2.5vh;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    ul {
+      width: 50%;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+  }
+
+  .social-icons-sidebar li {
+    flex-basis: unset;
   }
 
 }

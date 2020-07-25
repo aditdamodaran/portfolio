@@ -116,7 +116,7 @@ export const IndexPageTemplate = ({
       </div>
     </section>
     
-    <section id="project-previews">
+    <section id="projects">
       <div className="project-previews-container">
 
       <div className="project-preview-title-container">
