@@ -40,15 +40,15 @@ export const IndexPageTemplate = ({
         </h3>
       </div>
 
-      <img className="scroll-indicator arrow-1" src={downarrow} />
-      <img className="scroll-indicator arrow-2" src={downarrow} />
+      <img className="scroll-indicator arrow-1" src={downarrow} alt="scroll-down-arrow" />
+      <img className="scroll-indicator arrow-2" src={downarrow} alt="scroll-down-arrow" />
 
       {/* MAIN LANDING PAGE SOCIAL ICONS (DESKTOP) */}
 
       <div 
         className="social-icons-sidebar"
       >
-        <div className="line"></div>
+        {/*<div className="line"></div>*/}
 
         <ul>
           <li>

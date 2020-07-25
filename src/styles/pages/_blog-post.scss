@@ -1,0 +1,36 @@
+section.blog-post {
+  .post {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2.5% 0;
+    margin-bottom: 10vh;
+  }
+
+  .post-content{
+    font-family: "Avenir-Light", Arial;
+    font-size: 1.25rem;
+    line-height: 1.5;
+
+    ol > li,
+    ul > li {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .tags {
+    h4, .taglist {
+      width: 100%;
+      display: inline-flex;
+      list-style: none;
+    }
+
+    font-family: "Avenir-Light", Arial;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    display: block;
+
+    .taglist > li {
+      margin-left: 1rem;
+    }
+  }
+}

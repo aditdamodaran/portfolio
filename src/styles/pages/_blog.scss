@@ -1,0 +1,23 @@
+section.blog-index {
+  min-height: 100vh;
+}
+
+.blog-header {
+  font-size: 2.5rem;
+  font-family: "Avenir-Bold", Arial;
+  font-weight: bold;
+  text-decoration: none;
+  color: $secondary-text;
+  margin: 0;
+  width: 95%;
+  margin: 0rem auto;
+  padding: 1.5rem 1rem;
+}
+
+@include tablet {
+  section.blog-post {
+    .title {
+      padding-top: 2rem;
+    }
+  }
+}

@@ -7,31 +7,33 @@ class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map((post) => (
-      <li key={post.node.fields.slug}>
+      <div key={post.node.fields.slug} className="blog-post-tab">
         <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
+          <div className="date">
+            <p>{post.node.frontmatter.date}</p>
+          </div>
+          <header className="title-container">
+            <h2 className="title">{post.node.frontmatter.title}</h2>
+          </header>
         </Link>
-      </li>
+      </div>
     ))
     const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
-    const totalCount = this.props.data.allMarkdownRemark.totalCount
-    const tagHeader = `${totalCount} post${
-      totalCount === 1 ? '' : 's'
-    } tagged with “${tag}”`
+    // const totalCount = this.props.data.allMarkdownRemark.totalCount
+    const tagHeader = `Tag: ${tag[0].toUpperCase()}${tag.substr(1)}`
 
     return (
       <Layout>
-        <section className="section">
+        <section className="tag">
           <Helmet title={`${tag} | ${title}`} />
           <div className="container content">
             <div className="columns">
               <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: '6rem' }}
+                className="tag-content"
               >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-                <ul className="taglist">{postLinks}</ul>
+                <h3 className="tag-title">{tagHeader}</h3>
+                <div className="taglist">{postLinks}</div>
                 <p>
                   <Link to="/tags/">Browse all tags</Link>
                 </p>

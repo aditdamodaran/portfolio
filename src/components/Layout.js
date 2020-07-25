@@ -7,10 +7,9 @@ import '../styles/styles.scss'
 import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children }) => {
-  let index, blog, about = undefined
+  let index, about = undefined
   if (children.props){
     index = children.props.index
-    blog = children.props.blog
     about = children.props.about
   }
   const { title, description } = useSiteMetadata()

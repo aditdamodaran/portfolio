@@ -63,6 +63,11 @@
   margin: 0rem 1rem;
 }
 
+.navbar-item:hover {
+  color: darken($tertiary-text, 20%);
+  cursor: pointer;
+}
+
 
 @include mobile {
 

@@ -4,66 +4,64 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
 class BlogRoll extends React.Component {
+  mapTag(tag) {
+    switch(tag) {
+      case 'javascript': 
+        return '#fff082'
+      case 'vue':
+        return '#54af82'
+      case 'life':
+        return '#7ec1ea'
+      case 'college':
+        return '#d38b9e'
+      default:
+        return '#eea0ef'
+    }
+  }
+
   render() {
     const { data } = this.props
     let { edges: posts } = data.allMarkdownRemark
-    posts = posts.map(({ node: post }) => post)
 
     // Remove any posts without featured images from the index page
-    if (this.props.index){
-      posts = posts.filter(post => post.frontmatter.featuredimage)
-    }
+    // if (this.props.index){
+    //   posts = posts.filter(post => post.frontmatter.featuredimage)
+    // }
 
     return (
-      <div>
-        <div className="image-gallery is-horizontal">
-            {/* Vertical LEFT Half */}
-            <div className="is-vertical">
-
-
-              <Link className="gallery-tile-half" to={posts[0].fields.slug}>
-                <BackgroundImage className="gallery-tile-inner"
-                  fluid={posts[0].frontmatter.featuredimage.childImageSharp.fluid}>
-                  <div className="overlay-title">
-                    <h2>{posts[0].frontmatter.title}</h2>
-                    <p>Read more...</p>
-                  </div>
-                  <div className="overlay">
-                  </div>
-                </BackgroundImage>
-              </Link>
-
-              <Link className="gallery-tile-half" to={posts[1].fields.slug}>
-                <BackgroundImage className="gallery-tile-inner"
-                fluid={posts[1].frontmatter.featuredimage.childImageSharp.fluid}>
-                  <div className="overlay-title">
-                    <h2>{posts[1].frontmatter.title}</h2>
-                    <p>Read more...</p>
-                  </div>
-                  <div className="overlay">
-                  </div>
-                </BackgroundImage>
-              </Link>
-
-            </div>
-            
-            
-            {/* Vertical RIGHT Half */}
-            <Link 
-              className="square" to={posts[1].fields.slug}
-            >
-              <BackgroundImage className="gallery-tile-inner"
-              fluid={posts[1].frontmatter.featuredimage.childImageSharp.fluid}>
-                <div className="overlay-title">
-                  <h2>{posts[1].frontmatter.title}</h2>
-                  <p>Read more...</p>
+      <div className="blog-roll">
+      {posts &&
+        posts.map(({ node: post }) => (
+          <Link
+            to={post.fields.slug}
+            key={post.id}
+          >
+          <div className="blog-post-tab">
+            <article>
+              <div className="date">
+                <p>{post.frontmatter.date}</p>
+              </div>
+              <header className="title-container">
+                <h2 className="title">{post.frontmatter.title}</h2>
+                <div className="tags">
+                  {post.frontmatter.tags && 
+                  post.frontmatter.tags.map((tag, idx) => 
+                    <span 
+                      key={idx} 
+                      class="tag"
+                      style={{
+                        backgroundColor : this.mapTag(tag)
+                      }}
+                    >
+                      <span class="tag-text">{tag}</span>
+                    </span>
+                  )}
                 </div>
-                <div className="overlay">
-                </div>
-              </BackgroundImage>
-            </Link>
-        </div>
-        
+              </header>
+            </article>
+          </div>
+          </Link>
+        ))}
       </div>
     )
   }
@@ -104,6 +102,7 @@ export default (props) => (
                     }
                   }
                 }
+                tags
               }
             }
           }
