@@ -315,7 +315,8 @@ section#blog {
 
   .social-icons-sidebar {
     position: absolute;
-    top: calc(95vh - 2.5vh);
+    top: unset;
+    bottom: 2.5vh;
     width: 90%;
     margin: 0 auto;
     height: auto;
