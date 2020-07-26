@@ -1,16 +1,14 @@
 /* eslint-disable */
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 import { CSSTransition } from 'react-transition-group';
-import { transform } from 'lodash';
+import { throttle } from '../utils/throttle'
 
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isMounted: !this.props.index,
       active: false,
       navBarActiveClass: '',
       scrollDirection: 'none',
@@ -18,45 +16,29 @@ const Navbar = class extends React.Component {
       menuOpen: false,
       atTop: true
     }
-    // this.handleScroll = this.handleScroll.bind(this)
   }
 
   componentDidMount() {
-    // console.log(`DidMount() isMounted: ${this.state.isMounted} Index: ${this.props.index}`)
+    this._isMounted = true
       setTimeout(
-        () =>
-          this.setState({ isMounted: true }, () => {
-            const throttle = (func, wait = 250) => {
-              let timer = null;
-              return function(...args) {
-                if (timer === null) {
-                  timer = setTimeout(() => {
-                    func.apply(this, args);
-                    timer = null;
-                  }, wait);
-                }
-              }
-            }
-            window.addEventListener('scroll', () => throttle(this.handleScroll()))
-          }),
-        250,
-      );
+        () => {
+          window.addEventListener('scroll', () => throttle(this.state.isMounted, this.handleScroll()))
+        },
+      100);
   }
 
   componentWillUnmount() {
-    // console.log(`WillUnmount() isMounted: ${this.state.isMounted} Index: ${this.props.index}`)
-    // console.log(this.state.isMounted)
+    this._isMounted = false
     window.removeEventListener('scroll', () => this.handleScroll())
   }
 
   handleScroll = () => {
-    // console.log('handleScroll')
-    const { isMounted, scrollDirection, lastScrollTop, menuOpen, atTop } = this.state
+    const isMounted = this._isMounted
+    const { scrollDirection, lastScrollTop, menuOpen, atTop } = this.state
     const fromTop = window.scrollY
     const DELTA = 10
     const navHeight = 3
     const fromTopDelta = 25
-    // console.log(isMounted, scrollDirection, lastScrollTop, fromTop)
 
     // Make sure they scroll more than DELTA (to reveal Navbar)
     // Make sure the menu isn't open
@@ -65,12 +47,11 @@ const Navbar = class extends React.Component {
       return;
     }
 
-
     if (fromTop < fromTopDelta){
       this.setState({ atTop: true });
     }
     
-    if (!isMounted 
+    if (!isMounted
       || Math.abs(lastScrollTop - fromTop) <= DELTA 
       || menuOpen
       || fromTop < fromTopDelta) {
@@ -98,7 +79,6 @@ const Navbar = class extends React.Component {
   }
 
   toggleHamburger = () => {
-    // console.log('toggleHam')
     // toggle the active boolean in the state
     this.setState(
       {
@@ -119,9 +99,8 @@ const Navbar = class extends React.Component {
     )
   }
 
-  
+
   render() {
-    // console.log(`render() isMounted: ${this.state.isMounted} Index: ${this.props.index}`)
     return (
       <nav
         className="navbar"
@@ -136,8 +115,8 @@ const Navbar = class extends React.Component {
       >
         <div className="container">
           <CSSTransition
-          in={this.state.active}
-          timeout={400}
+            in={this.state.active}
+            timeout={400}
           >
           {/* Hamburger menu */}
           <div
@@ -185,26 +164,8 @@ const Navbar = class extends React.Component {
                 <Link className="navbar-item" to="/blog" onClick={() => this.toggleHamburger()}>
                   Blog
                 </Link>
-                {/*<Link className="navbar-item" to="/contact">
-                  Contact
-                </Link>*/}
               </div>
-              {/*<div className="navbar-end">
-                <a
-                  className="navbar-item"
-                  href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="icon">
-                    <img src={github} alt="Github" />
-                  </span>
-                </a>
-              </div>*/}
           </CSSTransition>
-
-
-
         </div> {/* Close 'container' */}
       </nav>
     )

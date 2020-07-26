@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
 
 class BlogRoll extends React.Component {
   mapTag(tag) {
@@ -23,11 +22,6 @@ class BlogRoll extends React.Component {
     const { data } = this.props
     let { edges: posts } = data.allMarkdownRemark
 
-    // Remove any posts without featured images from the index page
-    // if (this.props.index){
-    //   posts = posts.filter(post => post.frontmatter.featuredimage)
-    // }
-
     return (
       <div className="blog-roll">
       {posts &&
@@ -48,12 +42,12 @@ class BlogRoll extends React.Component {
                   post.frontmatter.tags.map((tag, idx) => 
                     <span 
                       key={idx} 
-                      class="tag"
+                      className="tag"
                       style={{
                         backgroundColor : this.mapTag(tag)
                       }}
                     >
-                      <span class="tag-text">{tag}</span>
+                      <span className="tag-text">{tag}</span>
                     </span>
                   )}
                 </div>
