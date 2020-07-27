@@ -38,7 +38,6 @@ export const BlogPostTemplate = ({
                   ))}
                 </span>
               </div>
-
             ) : null}
           </div>
         </div>

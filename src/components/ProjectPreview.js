@@ -60,16 +60,7 @@ class ProjectPreview extends React.Component {
                 <div key={idx} className="technologies"><p>{tech}</p></div>
               )) : null }
             </div> : null}
-
-
-
-
-
-
-
           </div>
-          
-        
         </div>
       </div>
     )

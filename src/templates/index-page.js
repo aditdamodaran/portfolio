@@ -27,15 +27,11 @@ export const IndexPageTemplate = ({
     <section className="main-landing">
       {/* MAIN LANDING PAGE COPY */}
       <div className="landing-page-copy-container">
-        <h1
-          className="landing-page-primary-copy"
-        >
+        <h1 className="landing-page-primary-copy">
           <span className="name">Adit Damodaran</span> is a builder at <span className="heart"><img src={heart} alt="heart" /></span>
         </h1>
         <div className="flex-break"></div>
-        <h3
-          className="landing-page-subheading-copy"
-        >
+        <h3 className="landing-page-subheading-copy">
           {subheading}
         </h3>
       </div>
@@ -45,11 +41,7 @@ export const IndexPageTemplate = ({
 
       {/* MAIN LANDING PAGE SOCIAL ICONS (DESKTOP) */}
 
-      <div 
-        className="social-icons-sidebar"
-      >
-        {/*<div className="line"></div>*/}
-
+      <div className="social-icons-sidebar">
         <ul>
           <li>
             <a href="https://www.linkedin.com/in/adit-damodaran-1a0245108" className="" title="LinkedIn">
@@ -67,11 +59,10 @@ export const IndexPageTemplate = ({
             </a>
           </li>
         </ul>
-      </div>
-      
-    </section>
+      </div> 
+    </section>{/* END - MAIN LANDING PAGE COPY */}
 
-    <section className="filler"></section>
+    <section className="filler" /> {/* END - FILLER */}
 
     <section id="aboutme">
       <div className="about-me-container">
@@ -105,7 +96,7 @@ export const IndexPageTemplate = ({
         </div>
 
       </div>
-    </section>
+    </section> {/* END - ABOUT ME */}
 
     <section id="work">
       <div className="work-container">
@@ -114,7 +105,7 @@ export const IndexPageTemplate = ({
       </h1>
       <Work></Work>
       </div>
-    </section>
+    </section> {/* END - WORK EXPERIENCE */}
     
     <section id="projects">
       <div className="project-previews-container">
@@ -212,22 +203,8 @@ export const IndexPageTemplate = ({
       </div>
       
       </div>
-    </section>
+    </section> {/* END - PROJECTS */}
     
-    {/*<section id="blog">
-      <div className="blog-title-container">
-      <h1 className="blog-title">
-        Blog
-      </h1>
-      </div>
-      <div className="blog-post-tiles">
-        <BlogRoll index={index}/>     
-      </div>
-            </section>*/}
-
-
-
-
     </div>{/* Close LP Container */}
   {/* Root Div */}
   </div>

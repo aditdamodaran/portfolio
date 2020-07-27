@@ -2,9 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-// import Features from '../components/Features'
-// import Testimonials from '../components/Testimonials'
-// import Pricing from '../components/Pricing'
 import BackgroundImage from 'gatsby-background-image'
 import Content, { HTMLContent } from '../components/Content'
 
@@ -17,7 +14,6 @@ export const ProjectPageTemplate = ({
   contentComponent
 }) => {
   const PageContent = contentComponent || Content
-  // console.log(imageLarge)
   return (
     <div>
       <section id="projectpage">

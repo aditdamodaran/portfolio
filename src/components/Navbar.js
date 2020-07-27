@@ -1,4 +1,9 @@
 /* eslint-disable */
+/* ----------------
+THANKS TO BRITTANY CHIANG FOR HELPING ME WITH THIS
+BY OPEN SOURCING HER NAVBAR CODE
+https://github.com/bchiang7/v4/blob/master/src/components/nav.js 
+---------------- */
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/logo.svg'
@@ -148,9 +153,7 @@ const Navbar = class extends React.Component {
               className={`navbar-menu ${this.state.navBarActiveClass}`}
             >
               <div className="navbar-start">
-                {this.props.about ?
-                  null
-                :
+                {this.props.about ? null :
                   <Link className="navbar-item" to="/#aboutme" onClick={() => this.toggleHamburger()}>
                     About
                   </Link>

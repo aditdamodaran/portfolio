@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 
 class BlogRoll extends React.Component {
+  // Maps select tag strings to colors
   mapTag(tag) {
     switch(tag) {
       case 'javascript': 
