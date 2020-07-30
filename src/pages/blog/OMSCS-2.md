@@ -6,13 +6,10 @@ featuredpost: false
 featuredimage: /img/flavor_wheel.jpg
 description: 
 tags:
-  - life
-  - masters
+  - OMSCS
 ---
 
-
-
-### What I've Done in the Meantime
+### What I've Done in the Meantime 
 
 Since learning about my acceptance into OMSCS on April 21st, 2020 (about 3 months ago), I've been looking forward to registering for my first class. In the meantime, I have **sent my Transcripts and Proof-of-Lawful residence** to the Georgia Tech Office of Graduate Studies. I've also **joined some Facebook groups** where students in the same cohort as me share information and resources. Finally I've **activated my GTech Account** [using the instructions found here](https://faq.oit.gatech.edu/content/how-do-i-activate-my-gt-account).
 

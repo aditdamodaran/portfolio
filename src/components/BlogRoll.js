@@ -14,6 +14,8 @@ class BlogRoll extends React.Component {
         return '#7ec1ea'
       case 'college':
         return '#d38b9e'
+      case 'OMSCS':
+        return '#59a8f7'
       default:
         return '#eea0ef'
     }
