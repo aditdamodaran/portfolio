@@ -2,14 +2,13 @@
 templateKey: blog-post
 title: OMSCS | Part II, Registering for Classes
 date: 2020-07-29T21:31:10.000Z
+description: "  "
 featuredpost: false
 featuredimage: /img/flavor_wheel.jpg
-description: 
 tags:
   - OMSCS
 ---
-
-### What I've Done in the Meantime 
+### What I've Done in the Meantime
 
 Since learning about my acceptance into OMSCS on April 21st, 2020 (about 3 months ago), I've been looking forward to registering for my first class. In the meantime, I have **sent my Transcripts and Proof-of-Lawful residence** to the Georgia Tech Office of Graduate Studies. I've also **joined some Facebook groups** where students in the same cohort as me share information and resources. Finally I've **activated my GTech Account** [using the instructions found here](https://faq.oit.gatech.edu/content/how-do-i-activate-my-gt-account).
 
@@ -31,19 +30,14 @@ In my first year, I need to take at least 2 "foundational" courses with a grade 
 
 **[How to Register Video](https://www.youtube.com/watch?v=WfnzgHBwhpU&list=PLl2dezBNo_Bme8RliCeBnjeK5_KnElfNU&index=4)**
 
+### The Gameplan
+
 **I plan to register for one of the following courses:**
 
-**#1** Human Computer Interaction 
+**\#1** Human Computer Interaction 
 
-**#2** Introduction to Operating Systems
+**\#2** Introduction to Operating Systems
 
-**#3** EduTech
+**\#3** EduTech
 
 I'll post an update with how the registration process goes!
-
-
-
-
-
-
-
