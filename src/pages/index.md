@@ -2,12 +2,12 @@
 templateKey: index-page
 title:  Adit Damodaran is a builder at ♥
 image: /img/home-jumbotron.jpg
-heading: Heya! I'm Adit. I'm a software engineer, web designer, photographer, writer, and avid roadtripper. As of June 2020, I'm looking for full-time positions.
-subheading: I'm a front-end engineer passionate about creating for the web.
+heading: Heya! I'm Adit. I'm a software engineer, data scientist, photographer, writer, and avid roadtripper. As of August 2020, I'm looking for full-time positions.
+subheading: I'm a software engineer and data scientist passionate about creating for the web.
 aboutme:
   title: Heya! I’m Adit.
   description1: >
-    I’m a software engineer, web designer, photographer, writer, and avid roadtripper. I most recently worked as an Economist at Hopper, but am looking for my next opportunity a bit early due to Covid-19.  
+    I’m a software engineer, data scientist, photographer, writer, and avid roadtripper. I most recently worked as an Economist at Hopper, but am looking for my next opportunity a bit early due to Covid-19.  
   description2: >
     I graduated from the University of Chicago in Dec. 2019 with a B.A. in Economics and a specialization in Data Science. In Aug. 2020, I’ll begin my Master’s in Computer Science at the Georgia Institute of Technology.
   description3: >

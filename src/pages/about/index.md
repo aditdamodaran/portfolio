@@ -3,7 +3,7 @@ templateKey: 'about-page'
 path: /about
 title: About 
 ---
-Heya! I’m Adit (“uh-dit”). I’m a software engineer, web designer, photographer, writer, and avid roadtripper. **As of June 2020, I’m looking for full-time positions.**
+Heya! I’m Adit (“uh-dit”). I’m a software engineer, data scientist, photographer, writer, and avid roadtripper. **As of June 2020, I’m looking for full-time positions.**
 
 I graduated from the University of Chicago in Dec. 2019 with a BA in Economics and a specialization in Data Science. In Aug. 2020, I’ll begin my Online Master’s in Computer Science at the Georgia Institute of Technology.
 
