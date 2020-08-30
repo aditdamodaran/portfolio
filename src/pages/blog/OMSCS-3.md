@@ -8,7 +8,7 @@ featuredimage: /img/flavor_wheel.jpg
 tags:
   - OMSCS
 ---
-***The OMSCS series covers my personal experience going through Georgia Tech's Online Master's in Computer Science. [Part I can be found here.](https://www.aditdamodaran.com/blog/OMSCS-1/) My hope is that this guide will be useful as a reference for current and prospective students. Part II covers how I went about the registration process before the start of my first class.***
+***The OMSCS series covers my personal experience going through Georgia Tech's Online Master's in Computer Science. [Part I can be found here.](https://www.aditdamodaran.com/blog/OMSCS-1/) My hope is that this guide will be useful as a reference for current and prospective students. Part III covers the results of registration, some early reflections on my first course, and some positive feedback on the OMSCS program itself.***
 
 ### How Did Registration Go?
 
