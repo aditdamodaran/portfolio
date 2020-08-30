@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { kebabCase } from 'lodash'
 import { Link, graphql, StaticQuery } from 'gatsby'
 
 class BlogRoll extends React.Component {
@@ -11,11 +12,13 @@ class BlogRoll extends React.Component {
       case 'vue':
         return '#54af82'
       case 'life':
-        return '#7ec1ea'
+        return '#66e268'
       case 'college':
-        return '#d38b9e'
+        return '#e9a8ea'
       case 'OMSCS':
-        return '#59a8f7'
+        return '#6fb0ed'
+      case 'frontend':
+        return '#f2526f'
       default:
         return '#eea0ef'
     }
@@ -29,35 +32,43 @@ class BlogRoll extends React.Component {
       <div className="blog-roll">
       {posts &&
         posts.map(({ node: post }) => (
-          <Link
-            to={post.fields.slug}
-            key={post.id}
-          >
-          <div className="blog-post-tab">
-            <article>
-              <div className="date">
-                <p>{post.frontmatter.date}</p>
-              </div>
-              <header className="title-container">
-                <h2 className="title">{post.frontmatter.title}</h2>
-                <div className="tags">
-                  {post.frontmatter.tags && 
-                  post.frontmatter.tags.map((tag, idx) => 
-                    <span 
-                      key={idx} 
-                      className="tag"
-                      style={{
-                        backgroundColor : this.mapTag(tag)
-                      }}
-                    >
-                      <span className="tag-text">{tag}</span>
-                    </span>
-                  )}
+          <div key={post.id} className="blog-post-tab-container">
+            {/* BLOG POST TAB */}
+            <Link
+              to={post.fields.slug}
+              className="blog-post-tab"
+            >
+            <div>
+              <article>
+                <div className="date">
+                  <p>{post.frontmatter.date}</p>
                 </div>
-              </header>
-            </article>
+                <header className="title-container">
+                  <h2 className="title">{post.frontmatter.title}</h2>
+                </header>
+              </article>
+            </div>
+            </Link>
+            {/* BLOG POST TAG */}
+            <div className="tags">
+              {post.frontmatter.tags && 
+              post.frontmatter.tags.map((tag, idx) => 
+                <Link
+                  to={`/tags/${tag.toLowerCase()}`}
+                  key={idx}
+                >
+                  <span  
+                    className="tag"
+                    style={{
+                      backgroundColor : this.mapTag(tag)
+                    }}
+                  >
+                    <span className="tag-text">{tag}</span>
+                  </span>
+                </Link>
+              )}
+            </div>
           </div>
-          </Link>
         ))}
       </div>
     )
