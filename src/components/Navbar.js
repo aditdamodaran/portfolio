@@ -154,7 +154,7 @@ const Navbar = class extends React.Component {
             >
               <div className="navbar-start">
                 {this.props.about ? null :
-                  <Link className="navbar-item" to="/#aboutme" onClick={() => this.toggleHamburger()}>
+                  <Link className="navbar-item" to="/about" onClick={() => this.toggleHamburger()}>
                     About
                   </Link>
                 }

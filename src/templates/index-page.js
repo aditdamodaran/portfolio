@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import github from '../img/github-icon.svg'
 import linkedin from '../img/linkedin-icon.svg'
-import heart from '../img/heart.svg'
+// import heart from '../img/heart.svg'
 import twitter from '../img/twitter-icon.svg'
 import downarrow from '../img/downarrow.svg'
 import Layout from '../components/Layout'
@@ -24,8 +24,7 @@ export const IndexPageTemplate = ({
       className="landing-page-container"
     >
 
-    <section className="main-landing">
-      {/* MAIN LANDING PAGE COPY */}
+    {/*<section className="main-landing">
       <div className="landing-page-copy-container">
         <h1 className="landing-page-primary-copy">
           <span className="name">Adit Damodaran</span> is a builder at <span className="heart"><img src={heart} alt="heart" /></span>
@@ -35,12 +34,51 @@ export const IndexPageTemplate = ({
           {subheading}
         </h3>
       </div>
+    </section>
 
-      <img className="scroll-indicator arrow-1" src={downarrow} alt="scroll-down-arrow" />
-      <img className="scroll-indicator arrow-2" src={downarrow} alt="scroll-down-arrow" />
+    <section className="filler" />*/}
 
-      {/* MAIN LANDING PAGE SOCIAL ICONS (DESKTOP) */}
+    <section id="aboutme">
+      <div id="about-me-container">
+        <div className="about-me">
 
+          <div className="left-half">
+            <div className="about-me-left">
+              <h1 className="about-me-title">
+                {aboutme.title}
+              </h1>
+              <h3 className="about-me-description">
+                <div className="about-me-description-segment">{aboutme.description1}</div>
+                <div className="about-me-description-segment">
+                  {aboutme.description2}
+                  <br /><br /><a href="/about">Read more...</a>
+                  <br />
+                </div>
+              </h3>
+            </div>
+          </div>
+
+          <div className="right-half">
+            <div className="about-me-right about-me-image-container">
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: aboutme.image,
+                  alt: `Adit Damodaran`,
+                  className: "about-me-image"
+                }}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div id="scroll-indicators">
+          <img className="scroll-indicator arrow-1" src={downarrow} alt="scroll-down-arrow" />
+          <img className="scroll-indicator arrow-2" src={downarrow} alt="scroll-down-arrow" />
+        </div>
+      </div>
+    </section> {/* END - ABOUT ME */}
+
+    <section id="social-icons">
       <div className="social-icons-sidebar">
         <ul>
           <li>
@@ -59,44 +97,8 @@ export const IndexPageTemplate = ({
             </a>
           </li>
         </ul>
-      </div> 
-    </section>{/* END - MAIN LANDING PAGE COPY */}
-
-    <section className="filler" /> {/* END - FILLER */}
-
-    <section id="aboutme">
-      <div className="about-me-container">
-
-        <div className="left-half">
-          <div className="about-me-left">
-            <h1 className="about-me-title">
-              {aboutme.title}
-            </h1>
-            <h3 className="about-me-description">
-              <div className="about-me-description-segment">{aboutme.description1}</div>
-              <div className="about-me-description-segment">
-                {aboutme.description2}
-                <br /><br /><a href="/about">Read more...</a>
-                <br />
-              </div>
-            </h3>
-          </div>
-        </div>
-
-        <div className="right-half">
-          <div className="about-me-right about-me-image-container">
-            <PreviewCompatibleImage
-              imageInfo={{
-                image: aboutme.image,
-                alt: `Adit Damodaran`,
-                className: "about-me-image"
-              }}
-            />
-          </div>
-        </div>
-
       </div>
-    </section> {/* END - ABOUT ME */}
+    </section>
 
     <section id="work">
       <div className="work-container">
@@ -223,7 +225,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout index={true}>
       <IndexPageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
         subheading={frontmatter.subheading}
         aboutme={frontmatter.aboutme}
@@ -251,13 +252,6 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         heading
         subheading
         aboutme {
