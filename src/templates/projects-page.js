@@ -6,12 +6,32 @@ import ProjectPreview from '../components/ProjectPreview'
 
 export const ProjectsPageTemplate = ({
   work,
+  side,
   intro,
   older
 }) => (
   <div className="content">
     <section id="projects">
       <div className="project-previews-container">
+
+        <div className="project-preview-title-container">
+          <h1 className="projects-title">
+            Side Projects
+          </h1>
+        </div>
+    
+        <div className="projects">
+          <ProjectPreview
+            title={side.projects[0].title}
+            image={side.projects[0].image}
+            text={side.projects[0].text}
+            tech={side.projects[0].tech}
+            link={side.projects[0].link}
+            pageLink={side.projects[0].pageLink}
+            github={side.projects[0].github}
+          />
+        </div>
+
         <div className="project-preview-title-container">
           <h1 className="projects-title">
             Work Projects
@@ -121,6 +141,7 @@ const ProjectsPage = ({ data }) => {
     <Layout>
       <ProjectsPageTemplate
         work={frontmatter.work}
+        side={frontmatter.side}
         intro={frontmatter.intro}
         older={frontmatter.older}
       />
@@ -153,6 +174,21 @@ export const projectsPageQuery = graphql`
         heading
         subheading
         work {
+          projects {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1200, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            title
+            text
+            tech
+            pageLink
+          }
+        }
+        side {
           projects {
             image {
               childImageSharp {

@@ -15,6 +15,7 @@ export const IndexPageTemplate = ({
   subheading,
   aboutme,
   work,
+  side,
   intro,
   older,
   index
@@ -111,6 +112,24 @@ export const IndexPageTemplate = ({
     
     <section id="projects">
       <div className="project-previews-container">
+
+      <div className="project-preview-title-container">
+        <h1 className="projects-title">
+          Side Projects
+        </h1>
+      </div>
+      
+      <div className="projects">
+        <ProjectPreview
+          title={side.projects[0].title}
+          image={side.projects[0].image}
+          text={side.projects[0].text}
+          tech={side.projects[0].tech}
+          link={side.projects[0].link}
+          pageLink={side.projects[0].pageLink}
+          github={side.projects[0].github}
+        />
+      </div>
 
       <div className="project-preview-title-container">
         <h1 className="projects-title">
@@ -212,13 +231,6 @@ export const IndexPageTemplate = ({
   </div>
 )
 
-IndexPageTemplate.propTypes = {
-  aboutme: PropTypes.object,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-}
-
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
@@ -229,6 +241,7 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         aboutme={frontmatter.aboutme}
         work={frontmatter.work}
+        side={frontmatter.side}
         intro={frontmatter.intro}
         older={frontmatter.older}
         index={true}
@@ -280,6 +293,23 @@ export const pageQuery = graphql`
             title
             text
             tech
+            pageLink
+          }
+        }
+        side {
+          projects {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1200, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            title
+            text
+            tech
+            link
+            github
             pageLink
           }
         }

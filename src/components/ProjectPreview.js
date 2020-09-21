@@ -37,7 +37,7 @@ class ProjectPreview extends React.Component {
               </div>
               {this.props.link ?
                 <div className="project-website">
-                  <a href={`https://www.${this.props.link}`}>
+                  <a href={`//${this.props.link}`}>
                     Website
                   </a>
                 </div>

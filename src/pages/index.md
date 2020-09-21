@@ -31,6 +31,17 @@ work:
        I built, shipped, and maintained software to scrape ~100 results/minute for any given filter on Sales Navigator, helping Chicago Ventures automate a previously manual and tedious process.
       tech: ['Python (lxml + Pandas)', 'Selenium', 'Kivy']
       pageLink: 'salesnav'
+side:
+  projects:
+    - image: /img/cdc.jpg
+      title: >
+        Cloudy Day Club - Spotify (2020)
+      text: >
+        Cloudy Day Club is a Spotify Web Player with a splash of color for those drab cloudy days. The interface's color is personalized to the album art of whatever song you choose to listen to. 
+      tech: ['Spotify Web API','React','Redux','Express','Node.js','axios', 'Reach Router', 'Styled Components', 'SCSS', 'Heroku']
+      link: 'cloudy-day-club.herokuapp.com'
+      github: 'cloudy-day-club'
+      pageLink: 'cloudydayclub'
 intro:
   blurbs:
     - image: /img/andrecastroracingbg.jpg
@@ -39,7 +50,7 @@ intro:
       text: >
         Andre Castro is a first-generation Colombian-American racecar driver and 2020 EuroNASCAR Champion. I built Andre's website to help sponsors and racing teams better understand his potential and talent.
       tech: ['React', 'Gatsby v2', 'Netlify (CMS)', 'SASS', 'Bulma (CSS)', 'Javascript']
-      link: 'andrecastroracing.com'
+      link: 'www.andrecastroracing.com'
       github: 'andrecastroracing'
       pageLink: 'andrecastroracing'
     - image: /img/midwayvc.jpg
@@ -48,7 +59,7 @@ intro:
       text: >
         Midway Ventures was founded in 2014 as a student organization at the University of Chicago to help VC firms identify, diligence, and source promising student startups, and to work directly with startups on projects related to fundraising and business development.
       tech: ['JavaScript', 'Bootstrap', 'Squarespace Dev Platform', 'jQuery', 'Greensock', 'HTML', 'LESS',]
-      link: 'midwayvc.com'
+      link: 'www.midwayvc.com'
       pageLink: 'midwayvc'
     - image: /img/sublilandingbg.jpg
       title: >
