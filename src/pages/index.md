@@ -9,7 +9,7 @@ aboutme:
   description1: >
     I enjoy building software for the web. I’m also a photographer, writer, and avid roadtripper. I most recently worked as an Economist at Hopper, but am looking for my next opportunity a bit early due to Covid-19.  
   description2: >
-    I graduated from the University of Chicago in Dec. 2019 with a B.A. in Economics and a specialization in Data Science. In Aug. 2020, I’ll begin my Master’s in Computer Science at the Georgia Institute of Technology.
+    I graduated from the University of Chicago in Dec. 2019 with a B.A. in Economics and a specialization in Data Science. I'm working on my Master’s in Computer Science at the Georgia Institute of Technology.
   description3: >
     During my brief time at Hopper, I developed a report on how Covid-19 would affect U.S. & Canadian flight operations and airfare, and created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers.
   description4: >
@@ -39,7 +39,7 @@ side:
       text: >
         Cloudy Day Club is a Spotify Web Player with a splash of color for those drab cloudy days. The interface's color is personalized to the album art of whatever song you choose to listen to. 
       tech: ['Spotify Web API','React','Redux','Express','Node.js','axios', 'Reach Router', 'Styled Components', 'SCSS', 'Heroku']
-      link: 'cloudy-day-club.herokuapp.com'
+      link: 'cloudyday.club'
       github: 'cloudy-day-club'
       pageLink: 'cloudydayclub'
 intro:

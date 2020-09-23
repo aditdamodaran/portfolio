@@ -7,7 +7,7 @@ imageLarge: true
 heading:  
 ---
 
-[cloudy-day-club.herokuapp.com](https://cloudy-day-club.herokuapp.com/)  
+[cloudyday.club](https://www.cloudyday.club/)  
 [GitHub](https://github.com/aditdamodaran/cloudy-day-club)
 
 I love Spotify, whether we're talking about its desktop app, mobile app, or web player. They're all great feats of engineering and product design. Personally the way I use Spotify at my desk is to have it open on a separate monitor while I work on my laptop. As I worked in various offices throughout college, I noticed a lot of other folks did this too. 

@@ -29,7 +29,7 @@ side:
       text: >
         Cloudy Day Club is a Spotify Web Player with a splash of color for those drab cloudy days. The interface's color is personalized to the album art of whatever song you choose to listen to. 
       tech: ['Spotify Web API','React','Redux','Express','Node.js','axios', 'Reach Router', 'Styled Components', 'SCSS', 'Heroku']
-      link: 'cloudy-day-club.herokuapp.com'
+      link: 'cloudyday.club'
       github: 'cloudy-day-club'
       pageLink: 'cloudydayclub'
 intro:
