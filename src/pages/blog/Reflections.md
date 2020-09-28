@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Life and Career Updates
-date: 2020-08-12T21:31:10.000Z
+date: 2020-09-28T06:31:10.000Z
 description: "  "
 featuredpost: false
 featuredimage: /img/flavor_wheel.jpg
