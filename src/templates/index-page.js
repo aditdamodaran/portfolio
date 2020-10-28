@@ -178,13 +178,7 @@ export const IndexPageTemplate = ({
           pageLink={intro.blurbs[1].pageLink}
           link={intro.blurbs[1].link}
         />
-        <ProjectPreview
-          title={intro.blurbs[2].title}
-          image={intro.blurbs[2].image}
-          text={intro.blurbs[2].text}
-          pageLink={intro.blurbs[2].pageLink}
-          tech={intro.blurbs[2].tech}
-        />
+       
       </div>
 
       <div className="project-preview-title-container">

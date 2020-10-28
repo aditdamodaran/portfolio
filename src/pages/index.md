@@ -61,13 +61,6 @@ intro:
       tech: ['JavaScript', 'Bootstrap', 'Squarespace Dev Platform', 'jQuery', 'Greensock', 'HTML', 'LESS',]
       link: 'www.midwayvc.com'
       pageLink: 'midwayvc'
-    - image: /img/sublilandingbg.jpg
-      title: >
-        Subli (2020)
-      text: >
-        Subli, the 2020 UChicago College New Venture Challenge winner, is a student-run startup that made a free peer-to-peer marketplace to find and list student housing. I worked with Subli to design and develop a landing page that would emphasize their brand's simplicity and honesty while increasing conversions.
-      tech: ['JavaScript', 'LESS', 'HTML']
-      pageLink: 'subli'
 older:
   projects:
     - image: /img/statepartisanship.jpg
