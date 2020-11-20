@@ -32,11 +32,12 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingIds: [
-          "G-BGC5ZGXN0J" // Google Analytics ID
-        ],
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "G-BGC5ZGXN0J",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: true
       },
     },
     {
