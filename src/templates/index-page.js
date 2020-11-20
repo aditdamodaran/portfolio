@@ -52,7 +52,7 @@ export const IndexPageTemplate = ({
                 <div className="about-me-description-segment">{aboutme.description1}</div>
                 <div className="about-me-description-segment">
                   {aboutme.description2}
-                  <br /><br /><a href="/about">Read more...</a>
+                  <br /><br /><a href="/about">Read more about me...</a>
                   <br />
                 </div>
               </h3>

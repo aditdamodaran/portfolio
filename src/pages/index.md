@@ -7,7 +7,7 @@ subheading: I'm a software engineer and data scientist passionate about creating
 aboutme:
   title: Heya! I’m Adit.
   description1: >
-    I enjoy building software for the web. I’m also a photographer, writer, and avid roadtripper. I most recently worked as an Economist at Hopper, but am looking for my next opportunity a bit early due to Covid-19.  
+    I enjoy building software for the web. I’m also a photographer, writer, and avid roadtripper. I most recently worked as an Economist at Hopper. 
   description2: >
     I graduated from the University of Chicago in Dec. 2019 with a B.A. in Economics and a specialization in Data Science. I'm working on my Master’s in Computer Science at the Georgia Institute of Technology.
   description3: >

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Adit Damodaran',
     description:
-      'Heya! I\'m Adit. I\'m a software engineer, web designer, photographer, writer, and avid roadtripper. As of June 2020, I\'m looking for full-time positions.',
+      'Heya! I\'m Adit. I\'m a software engineer, web designer, photographer, writer, and avid roadtripper. This is my personal site.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -31,6 +31,14 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-BGC5ZGXN0J" // Google Analytics ID
+        ],
+      },
+    },
     {
       resolve: 'gatsby-transformer-remark',
       options: {

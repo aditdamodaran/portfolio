@@ -3,11 +3,11 @@ templateKey: 'about-page'
 path: /about
 title: About 
 ---
-Heya! I’m Adit (“uh-dit”). I’m a software engineer, photographer, writer, and avid roadtripper. **Currently, I’m looking for full-time positions.**
+Heya! I’m Adit (“uh-dit”). I’m a software engineer, photographer, writer, and avid roadtripper. 
 
 I graduated from the University of Chicago in Dec. 2019 with a BA in Economics and a specialization in Data Science. I'm working on my Master’s in Computer Science at the Georgia Institute of Technology.
 
-I most recently worked as an **economist** at [Hopper](https://www.hopper.com/), but am looking for my next opportunity [a bit early due to Covid-19](https://www.linkedin.com/posts/adit-damodaran-1a0245108_covid19-chicago-classof2020-activity-6658772356833648641-994u). During my brief time at Hopper, I developed a report on how Covid-19 would affect U.S. & Canadian flight operations and airfare, and created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers.
+I most recently worked as an **economist** at [Hopper](https://www.hopper.com/). During my brief time at Hopper, I developed a report on how Covid-19 would affect U.S. & Canadian flight operations and airfare, and created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers.
 
 Prior to that, I worked as a **software engineering intern** at [Digitas](https://www.digitas.com/en-us) for the Intel account. I was also an undergraduate **VC intern** with [Chicago Ventures](http://chicagoventures.com/), and a **marketing intern** alongside the amazing team at the [Polsky Center for Entrepreneurship and Innovation](https://polsky.uchicago.edu/).
 
