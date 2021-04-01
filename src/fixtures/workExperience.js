@@ -6,8 +6,7 @@ export default [
     role: 'Economist',
     active: true,
     bullets: [
-      `Helping travellers save as much as possible on their next trip`,
-      `Analyzing Hopper's rich flight, hotel, and rental car data`
+      `Finding insights in airline, hotel, and rental car data to help travellers save the most on their next trip`
     ],
     technologies: ['Python (Pandas/Plotly)', 'Google Cloud Platform', 'SQL', ]
   },

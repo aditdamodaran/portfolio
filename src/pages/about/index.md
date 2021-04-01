@@ -5,7 +5,7 @@ title: About
 ---
 Heya! I’m Adit (“uh-dit”). I’m a software engineer, photographer, writer, and avid roadtripper. 
 
-I am currently an **economist** at [Hopper](https://www.hopper.com/), an online travel app that helps you get the best deals on your next trip. As an Economist, I work with various types of travel data (Airline, Hotel, and Rental Car). I use my background in economics and data science to uncover interesting trends and insights about where people are headed and how they can save the most on their way there. 
+I am currently an **economist** at [Hopper](https://www.hopper.com/). As an Economist, I work with various types of travel data (i.e. airline, hotel, rental car, etc.). I combine my background in economics and data science to uncover interesting trends and insights about where people are headed and how they can save the most on their way there. 
 
 Prior to my current role, I worked as a **software engineering intern** at [Digitas](https://www.digitas.com/en-us) for the Intel account. I was also an undergraduate **VC intern** with [Chicago Ventures](http://chicagoventures.com/), and a **marketing intern** alongside the amazing team at the [Polsky Center for Entrepreneurship and Innovation](https://polsky.uchicago.edu/).
 
