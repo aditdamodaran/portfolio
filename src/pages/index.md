@@ -2,16 +2,16 @@
 templateKey: index-page
 title:  Adit Damodaran is a builder at ♥
 image: /img/home-jumbotron.jpg
-heading: Heya! I'm Adit. I'm a software engineer, data scientist, photographer, writer, and avid roadtripper. As of August 2020, I'm looking for full-time positions.
+heading: Heya! I'm Adit. I'm a software engineer, data scientist, photographer, writer, and avid roadtripper.
 subheading: I'm a software engineer and data scientist passionate about creating for the web.
 aboutme:
   title: Heya! I’m Adit.
   description1: >
-    I enjoy building software for the web. I’m also a photographer, writer, and avid roadtripper. I most recently worked as an Economist at Hopper. 
+    I enjoy building software for the web. I’m also a photographer, writer, and avid roadtripper. I am currently an Economist at Hopper. 
   description2: >
     I graduated from the University of Chicago in Dec. 2019 with a B.A. in Economics and a specialization in Data Science. I'm working on my Master’s in Computer Science at the Georgia Institute of Technology.
   description3: >
-    During my brief time at Hopper, I developed a report on how Covid-19 would affect U.S. & Canadian flight operations and airfare, and created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers.
+    As an Economist at Hopper, I analyze travel data of all kinds (Airline, Hotel, and Rental Car data). I enjoy using data science to figure out where travellers are interested in going and how they can save the most on their trip. 
   description4: >
     Prior to that, I worked as a software engineering intern at Digitas for the Intel account. I was also an undergraduate VC Intern with Chicago Ventures, and a Marketing/Design Intern alongside the amazing team at the Polsky Center for Entrepreneurship and Innovation.
   image: /img/me.jpg

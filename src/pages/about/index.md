@@ -5,11 +5,11 @@ title: About
 ---
 Heya! I’m Adit (“uh-dit”). I’m a software engineer, photographer, writer, and avid roadtripper. 
 
+I am currently an **economist** at [Hopper](https://www.hopper.com/), an online travel app that helps you get the best deals on your next trip. As an Economist, I work with various types of travel data (Airline, Hotel, and Rental Car). I use my background in economics and data science to uncover interesting trends and insights about where people are headed and how they can save the most on their way there. 
+
+Prior to my current role, I worked as a **software engineering intern** at [Digitas](https://www.digitas.com/en-us) for the Intel account. I was also an undergraduate **VC intern** with [Chicago Ventures](http://chicagoventures.com/), and a **marketing intern** alongside the amazing team at the [Polsky Center for Entrepreneurship and Innovation](https://polsky.uchicago.edu/).
+
 I graduated from the University of Chicago in Dec. 2019 with a BA in Economics and a specialization in Data Science. I'm working on my Master’s in Computer Science at the Georgia Institute of Technology.
-
-I most recently worked as an **economist** at [Hopper](https://www.hopper.com/). During my brief time at Hopper, I developed a report on how Covid-19 would affect U.S. & Canadian flight operations and airfare, and created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers.
-
-Prior to that, I worked as a **software engineering intern** at [Digitas](https://www.digitas.com/en-us) for the Intel account. I was also an undergraduate **VC intern** with [Chicago Ventures](http://chicagoventures.com/), and a **marketing intern** alongside the amazing team at the [Polsky Center for Entrepreneurship and Innovation](https://polsky.uchicago.edu/).
 
 On campus at UChicago, **I led** [Midway Ventures](http://www.midwayvc.com/), a student-run startup consulting group that teaches undergraduates about venture capital financing. I built the Midway website myself during the summer of 2018.
 

@@ -2,12 +2,12 @@ export default [
   {
     company: 'Hopper',
     companyShort: 'Hopper',
-    timeframe: 'Mar. 2020 - Apr. 2020',
+    timeframe: 'Mar. 2020 - Present',
     role: 'Economist',
     active: true,
     bullets: [
-      `Analyzed Covid-19's impact on U.S./Canadian flight operations and airfare, and compiled a report with my findings`,
-      `Created data visualizations to help the communications team understand the scope of cancellations across major U.S. airports and carriers`
+      `Helping travellers save as much as possible on their next trip`,
+      `Analyzing Hopper's rich flight, hotel, and rental car data`
     ],
     technologies: ['Python (Pandas/Plotly)', 'Google Cloud Platform', 'SQL', ]
   },
