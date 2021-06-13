@@ -3,7 +3,7 @@ templateKey: 'about-page'
 path: /about
 title: About 
 ---
-Heya! I’m Adit (“uh-dit”). I’m a software engineer, photographer, writer, and avid roadtripper. 
+Heya! I’m Adit (“uh-dit”). 
 
 I am currently an **economist** at [Hopper](https://www.hopper.com/). As an Economist, I work with various types of travel data (i.e. airline, hotel, rental car, etc.). I combine my background in economics and data science to uncover interesting trends and insights about where people are headed and how they can save the most on their way there. 
 

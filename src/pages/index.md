@@ -7,7 +7,7 @@ subheading: I'm a software engineer and data scientist passionate about creating
 aboutme:
   title: Heya! I’m Adit.
   description1: >
-    I am currently an Economist at Hopper. I enjoy sciencing data and building software for the web. I’m also a photographer, writer, and avid roadtripper.  
+    I am currently an Economist at Hopper. I use data to model how things work and to tell stories. I also enjoy building software for the web. When I'm not at work, I'm a photographer, Formula 1 fan, and avid roadtripper.  
   description2: >
     I graduated from the University of Chicago in Dec. 2019 with a B.A. in Economics and a specialization in Data Science. I'm working on my Master’s in Computer Science at the Georgia Institute of Technology.
   description3: >
